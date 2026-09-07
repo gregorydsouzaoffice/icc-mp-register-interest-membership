@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/admin -name \"*ec8a8bb1-d99c-4ad8-842b-ff6b12caba68*\" 2>/dev/null)",
+      "Read(//Users/admin/**)"
+    ]
+  }
+}
