@@ -2273,63 +2273,7 @@ button {
   </div>
 </footer>
 
-<!-- ============================================================
-     9. MEMBERSHIP INTEREST POPUP MODAL (8-Second Auto Trigger)
-     ============================================================ -->
-<div class="rsvp-modal-backdrop" id="rsvp-modal-backdrop" onclick="handleBackdropClick(event)">
-  <div class="rsvp-modal-window" role="dialog" aria-modal="true">
-    <button type="button" class="modal-close-btn" onclick="closeRSVPModal()" aria-label="Close dialog">✕</button>
 
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-      <img src="assets/logos/icc100-blue.png" alt="ICC 100" style="height: 34px; width: auto;">
-      <div>
-        <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--royal-blue);">MADHYA PRADESH CHAPTER</div>
-        <div style="font-size: 13px; font-weight: 800; color: var(--navy-dark);">MAKERS OF PROGRESS</div>
-      </div>
-    </div>
-
-    <h2 style="font-size: 14px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #64748B; margin-bottom: 14px;">MEMBERSHIP APPLICATION</h2>
-    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">Membership is by invitation — express your interest to join ICC MP Council.</p>
-
-    <form id="pop-modal-form" onsubmit="handleModalRSVPSubmit(event)" style="display: flex; flex-direction: column; gap: 12px;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <div>
-          <label class="modal-field-label" for="pop-name">Full Name *</label>
-          <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-name" required autocomplete="name">
-        </div>
-        <div>
-          <label class="modal-field-label" for="pop-phone">Mobile Number *</label>
-          <input type="tel" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-phone" required autocomplete="tel">
-        </div>
-      </div>
-      <div>
-        <label class="modal-field-label" for="pop-email">Email Address *</label>
-        <input type="email" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-email" required autocomplete="email">
-      </div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <div>
-          <label class="modal-field-label" for="pop-org">Company / Organisation *</label>
-          <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-org" required autocomplete="organization">
-        </div>
-        <div>
-          <label class="modal-field-label" for="pop-desig">Designation</label>
-          <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-desig" autocomplete="organization-title">
-        </div>
-      </div>
-      <p id="pop-rsvp-error" hidden style="color:#B91C1C;font-size:13px;text-align:center;margin:0;">Could not save your request. Please try again.</p>
-      <button type="submit" class="btn-confirm-seat-gold" id="btn-submit-modal" style="width: 100%; margin-top: 6px;">
-        <span>Apply for Membership</span>
-        <span>&rarr;</span>
-      </button>
-    </form>
-
-    <div id="pop-modal-success" style="display: none; padding: 20px 0; text-align: center;">
-      <div style="width: 44px; height: 44px; border-radius: 50%; background: #EFF6FF; color: var(--royal-blue); font-size: 22px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 8px;">✓</div>
-      <h3 style="font-size: 20px; font-weight: 800; color: var(--navy-dark);">Thank you for your interest.</h3>
-      <p style="color: var(--text-muted); font-size: 13.5px; margin: 6px 0 14px; line-height: 1.6;">We've received your application and will be in touch within 5 working days.<br><br><strong>ICC Madhya Pradesh — Makers of Progress.</strong></p>
-    </div>
-  </div>
-</div>
 
 <!-- ============================================================
      JAVASCRIPT ENGINE
@@ -2487,123 +2431,8 @@ async function handleMembershipSubmit(e) {
   }
 }
 
-async function handleModalRSVPSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById("btn-submit-modal");
-  const err = document.getElementById("pop-rsvp-error");
-  if (err) err.hidden = true;
-  if (btn) {
-    btn.disabled = true;
-    btn.innerHTML = "<span>Submitting...</span>";
-  }
-
-  const formData = {
-    "Full Name": document.getElementById("pop-name").value.trim(),
-    "Mobile Number": document.getElementById("pop-phone").value.trim(),
-    "Email Address": document.getElementById("pop-email").value.trim(),
-    "Company Name": document.getElementById("pop-org").value.trim(),
-    "Designation / Title": document.getElementById("pop-desig").value.trim(),
-    "Applicant Confirmation": "Confirmed (Modal)"
-  };
-
-  try {
-    await postMembershipApplication(formData);
-    document.getElementById("pop-modal-form").style.display = "none";
-    document.getElementById("pop-modal-success").style.display = "block";
-  } catch (ex) {
-    console.error("SheetDB modal error:", ex);
-    if (err) err.hidden = false;
-    if (btn) {
-      btn.disabled = false;
-      btn.innerHTML = "<span>Apply for Membership</span><span>&rarr;</span>";
-    }
-  }
-}
-
-async function handleModalRSVPSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById("btn-submit-modal");
-  const err = document.getElementById("pop-rsvp-error");
-  if (err) err.hidden = true;
-  if (btn) { btn.disabled = true; btn.innerHTML = "<span>Saving...</span>"; }
-
-  const name = document.getElementById("pop-name").value.trim();
-  const phone = document.getElementById("pop-phone").value.trim();
-  const email = document.getElementById("pop-email").value.trim();
-  const org = document.getElementById("pop-org").value.trim();
-  const desig = document.getElementById("pop-desig").value.trim();
-
-  try {
-    await postRSVP(name, phone, email, org, desig);
-    document.getElementById("pop-modal-form").style.display = "none";
-    document.getElementById("pop-modal-success").style.display = "block";
-    setShareLink("pop-wa-share-btn");
-  } catch (ex) {
-    console.error("SheetDB error:", ex);
-    if (err) err.hidden = false;
-    if (btn) { btn.disabled = false; btn.innerHTML = "<span>Confirm My Seat</span><span>&rarr;</span>"; }
-  }
-}
-
 /* ------------------------------------------------------------
-   4. MODAL POPUP (8-Second Auto-Trigger)
-   ------------------------------------------------------------ */
-function openRSVPModal() {
-  const modal = document.getElementById("rsvp-modal-backdrop");
-  if (modal) {
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden";
-  }
-}
-
-function closeRSVPModal() {
-  const modal = document.getElementById("rsvp-modal-backdrop");
-  if (modal) {
-    modal.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-}
-
-function handleBackdropClick(e) {
-  if (e.target.id === "rsvp-modal-backdrop") closeRSVPModal();
-}
-
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeRSVPModal();
-});
-
-/* ------------------------------------------------------------
-   5. .ICS CALENDAR DOWNLOAD
-   ------------------------------------------------------------ */
-function downloadICSFile() {
-  const icsData = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Indian Chamber of Commerce//ICC MP Launch//EN",
-    "BEGIN:VEVENT",
-    "UID:icc-mp-launch-20260904@indianchamber.org",
-    "DTSTAMP:20260825T000000Z",
-    "DTSTART:20260904T053000Z",
-    "DTEND:20260904T080000Z",
-    "SUMMARY:Makers of Progress — ICC Madhya Pradesh Chapter Launch",
-    "DESCRIPTION:Official launch of the Indian Chamber of Commerce (ICC) Madhya Pradesh State Chapter.",
-    "LOCATION:Brilliant Convention Centre, Indore, Madhya Pradesh, India",
-    "STATUS:CONFIRMED",
-    "END:VEVENT",
-    "END:VCALENDAR"
-  ].join("\r\n");
-
-  const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
-  const link = document.createElement("a");
-  link.href = window.URL.createObjectURL(blob);
-  link.setAttribute("download", "Makers-of-Progress-ICC-MP-Launch.ics");
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-/* ------------------------------------------------------------
-   6. SHUFFLING TAGLINES CONTROLLER (Come & Fade Rotation)
+   3. SHUFFLING TAGLINES CONTROLLER (Come & Fade Rotation)
    ------------------------------------------------------------ */
 let currentTaglineIdx = 0;
 let taglineTimer = null;
@@ -2657,11 +2486,6 @@ function restartTaglineTimer() {
 document.addEventListener("DOMContentLoaded", () => {
   renderCouncil();
   startTaglineTimer();
-
-  // Automatic 8-Second Popup Modal
-  setTimeout(() => {
-    openRSVPModal();
-  }, 8000);
 });
 </script>
 
