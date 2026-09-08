@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <meta name="description" content="ICC Madhya Pradesh — Membership Interest Form. Tell us about yourself and your business. Membership is by invitation.">
-<meta name="theme-color" content="#0F1E3D">
+<meta name="theme-color" content="#2E4C8C">
 
 <!-- Social Open Graph -->
 <meta property="og:title" content="ICC Madhya Pradesh — Membership Interest Form">
@@ -31,23 +31,23 @@
    DESIGN SYSTEM · EXACT MATCH TO CLIENT BENCHMARK
    ============================================================ */
 :root {
-  --navy-dark:     #0F1E3D;
-  --navy-footer:   #0A1329;
-  --royal-blue:    #16388C;
-  --royal-hover:   #102A6B;
-  --cerulean:      #1B78BE;
-  --cyan-accent:   #00A3E0;
-  --gold-btn:      #E5A83B;
-  --gold-hover:    #D4972A;
+  --navy-dark:     #1C2A47;
+  --navy-footer:   #17223A;
+  --royal-blue:    #2E4C8C;
+  --royal-hover:   #253E74;
+  --cerulean:      #4A86BC;
+  --cyan-accent:   #6FB4D8;
+  --gold-btn:      #D8A75E;
+  --gold-hover:    #C6934A;
   
-  --bg-page:       #FAFCFE;
+  --bg-page:       #F8FAFC;
   --card-bg:       #FFFFFF;
   --border-light:  #E5EDF5;
   --border-mid:    #D0DFEE;
   
   --text-dark:     #1E293B;
   --text-heading:  #0F172A;
-  --text-muted:    #64748B;
+  --text-muted:    #6B7789;
   --text-light:    #94A3B8;
   
   --font-main:     "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -201,11 +201,11 @@ button {
   font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #16388C;
+  color: var(--royal-blue);
   font-family: var(--font-main);
 }
 .eyebrow-dash {
-  color: #16388C;
+  color: var(--royal-blue);
   opacity: 0.7;
 }
 
@@ -256,6 +256,10 @@ button {
   display: block;
 }
 
+.hero-description-p strong {
+  color: var(--navy-dark);
+  font-weight: 700;
+}
 .hero-description-p {
   font-size: clamp(14px, 1.6vw, 16.5px);
   line-height: 1.65;
@@ -273,7 +277,7 @@ button {
   width: 100%;
   max-width: 480px;
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(22, 56, 140, 0.16));
+  filter: drop-shadow(0 20px 40px rgba(46, 76, 140, 0.128));
   animation: floatGentle 6s ease-in-out infinite;
 }
 @keyframes floatGentle {
@@ -281,14 +285,6 @@ button {
   50% { transform: translateY(-8px); }
 }
 
-.hero-butterfly-accent {
-  position: absolute;
-  left: 0;
-  bottom: -20px;
-  width: 28px;
-  height: 28px;
-  color: #CBD5E1;
-}
 
 /* ============================================================
    DYNAMIC SHUFFLING TAGLINES (Come & Fade Animation)
@@ -403,248 +399,6 @@ button {
   color: var(--navy-dark);
   font-weight: 500;
   letter-spacing: -0.01em;
-}
-
-/* ============================================================
-   3. FLOATING EVENT INFO & COUNTDOWN CARD (Exact Match to Mockup)
-   ============================================================ */
-.sec-event-card-wrap {
-  padding: 0 0 clamp(48px, 6vw, 72px);
-  position: relative;
-}
-.event-floating-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 28px;
-  padding: clamp(28px, 4vw, 40px) clamp(20px, 4vw, 44px) clamp(24px, 3.5vw, 32px);
-  box-shadow: 0 20px 50px -10px rgba(15, 30, 61, 0.08);
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Background Subtle Cityscape Pattern Watermark */
-.event-floating-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 10% 90%, rgba(27, 120, 190, 0.06) 0%, transparent 40%),
-                    radial-gradient(circle at 90% 90%, rgba(27, 120, 190, 0.06) 0%, transparent 40%);
-  pointer-events: none;
-}
-
-.event-card-meta-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #EEF2F6;
-  position: relative;
-  z-index: 2;
-}
-.event-meta-col-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 16px;
-  text-align: left;
-  position: relative;
-}
-.event-meta-col-item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 10%;
-  height: 80%;
-  width: 1px;
-  background: #E2E8F0;
-}
-.meta-circle-badge {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #EEF5FC;
-  border: 1px solid #D9E8F8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--royal-blue);
-  flex-shrink: 0;
-}
-.meta-circle-badge svg {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 2;
-}
-.meta-stack-txt {
-  display: flex;
-  flex-direction: column;
-}
-.meta-main-bold {
-  font-size: 13.5px;
-  font-weight: 800;
-  color: var(--navy-dark);
-  line-height: 1.25;
-}
-.meta-sub-muted {
-  font-size: 11.5px;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-/* Event Starts In Eyebrow */
-.event-eyebrow-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin: 28px 0 20px;
-  position: relative;
-  z-index: 2;
-}
-.event-eyebrow-divider::before,
-.event-eyebrow-divider::after {
-  content: "";
-  width: 42px;
-  height: 1px;
-  background: #CBD5E1;
-}
-.event-eyebrow-txt {
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #0C3696;
-}
-
-/* Countdown 4-Boxes Row with Colons */
-.event-countdown-boxes-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(8px, 1.8vw, 16px);
-  margin-bottom: 28px;
-  position: relative;
-  z-index: 2;
-}
-.cd-digit-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(15, 30, 61, 0.04);
-  padding: clamp(16px, 2.5vw, 22px) clamp(16px, 2.5vw, 24px);
-  min-width: clamp(80px, 13vw, 118px);
-  text-align: center;
-}
-.cd-big-num-bold {
-  font-size: clamp(34px, 4.5vw, 48px);
-  font-weight: 800;
-  color: #0C3696;
-  line-height: 1;
-}
-.cd-label-caption {
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #64748B;
-  margin-top: 6px;
-}
-.cd-colon-separator {
-  font-size: 24px;
-  font-weight: 700;
-  color: #94A3B8;
-  margin-top: -12px;
-  user-select: none;
-}
-
-/* Actions Row */
-.event-card-btn-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  position: relative;
-  z-index: 2;
-  flex-wrap: wrap;
-}
-.btn-card-reserve-solid {
-  background: #0B379B;
-  color: #FFFFFF;
-  padding: 13px 32px;
-  border-radius: var(--r-pill);
-  font-size: 14.5px;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 8px 22px -4px rgba(11, 55, 155, 0.38);
-  transition: all 0.2s ease;
-}
-.btn-card-reserve-solid:hover {
-  background: #082875;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px -4px rgba(11, 55, 155, 0.5);
-}
-.btn-card-calendar-outline {
-  background: #FFFFFF;
-  color: var(--navy-dark);
-  border: 1.5px solid #0B379B;
-  padding: 13px 28px;
-  border-radius: var(--r-pill);
-  font-size: 14.5px;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.2s ease;
-}
-.btn-card-calendar-outline:hover {
-  background: #F8FAFC;
-  border-color: #082875;
-  transform: translateY(-1px);
-}
-.download-details-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #1B78BE;
-  margin-top: 18px;
-  transition: color 0.2s ease;
-  position: relative;
-  z-index: 2;
-}
-.download-details-link:hover {
-  color: #0B379B;
-  text-decoration: underline;
-}
-.btn-card-royal:hover {
-  background: var(--royal-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(22, 56, 140, 0.25);
-}
-.btn-card-calendar {
-  background: #FFFFFF;
-  color: var(--navy-dark);
-  border: 1px solid var(--border-mid);
-  padding: 12px 24px;
-  border-radius: var(--r-pill);
-  font-size: 14px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.2s ease;
-}
-.btn-card-calendar:hover {
-  background: #F8FAFC;
-  border-color: #94A3B8;
 }
 
 /* ============================================================
@@ -980,7 +734,7 @@ button {
   bottom: -8px;
   border-style: solid;
   border-width: 8px 10px 0 0;
-  border-color: #0A1633 transparent transparent transparent;
+  border-color: #1B2E5A transparent transparent transparent;
 }
 .maker-sector-banner svg {
   width: 10px;
@@ -1195,215 +949,370 @@ button {
 }
 
 /* ============================================================
-   7. DARK NAVY RSVP CARD (Exact Match)
+   7. MEMBERSHIP INTEREST FORM (Sky-Blue Card)
    ============================================================ */
-.sec-dark-rsvp {
-  padding: 0 0 clamp(60px, 8vw, 100px);
+.sec-membership-form {
+  padding: 0 0 clamp(56px, 7vw, 88px);
+  scroll-margin-top: 110px;
 }
-.dark-rsvp-container-card {
-  background: var(--navy-dark);
-  border-radius: var(--r-lg);
-  padding: clamp(28px, 4vw, 48px);
-  color: #FFFFFF;
-  display: block;
-  max-width: 860px;
+.membership-form-card {
+  position: relative;
+  max-width: 980px;
   margin: 0 auto;
-  box-shadow: 0 30px 70px -10px rgba(15, 30, 61, 0.4);
+  background: linear-gradient(180deg, #F5F9FD 0%, #E6EFF8 100%);
+  border: 1px solid #C4DCF1;
+  border-radius: 28px;
+  padding: clamp(28px, 4.5vw, 56px) clamp(20px, 4.5vw, 56px);
+  box-shadow: 0 34px 70px -28px rgba(46, 76, 140, 0.224), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  overflow: hidden;
 }
-.dark-rsvp-title {
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-  line-height: 1.25;
-  margin-bottom: 8px;
+.membership-form-card::before {
+  content: "";
+  position: absolute;
+  top: -160px;
+  right: -140px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(111, 180, 216, 0.16) 0%, rgba(111, 180, 216, 0) 70%);
+  pointer-events: none;
 }
-.dark-rsvp-subtitle {
-  font-size: 14px;
-  color: #94A3B8;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+.membership-form-card::after {
+  content: "";
+  position: absolute;
+  bottom: -180px;
+  left: -140px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(216, 167, 94, 0.12) 0%, rgba(216, 167, 94, 0) 70%);
+  pointer-events: none;
 }
-.dark-rsvp-meta-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.meta-row-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 14px;
-  color: #E2E8F0;
-}
-.meta-row-item svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  color: var(--cyan-accent);
+.membership-form-card > * {
+  position: relative;
+  z-index: 1;
 }
 
-.dark-rsvp-form {
+/* Card head */
+.mf-head {
+  text-align: center;
+  padding-bottom: clamp(22px, 3vw, 30px);
+  margin-bottom: clamp(6px, 1.5vw, 12px);
+  border-bottom: 1px solid rgba(46, 76, 140, 0.112);
+}
+.mf-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 14px;
+}
+.mf-eyebrow::before,
+.mf-eyebrow::after {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold-btn);
+}
+.mf-title {
+  font-size: clamp(27px, 3.8vw, 40px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+.mf-title em {
+  font-style: normal;
+  color: var(--royal-blue);
+}
+.mf-subtitle {
+  font-size: clamp(15.5px, 1.7vw, 17.5px);
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 660px;
+  margin: 12px auto 0;
+}
+
+/* Form layout */
+.mf-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
-.dark-form-grid-2 {
+.mf-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 18px;
 }
-.dark-input-field-wrap {
+.mf-field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
-.dark-input-label {
-  font-size: 12.5px;
+.mf-label {
+  font-size: 15.5px;
   font-weight: 700;
-  color: #CBD5E1;
+  color: var(--navy-dark);
+  line-height: 1.3;
 }
-.modal-field-label {
-  font-size: 12px;
-  font-weight: 700;
-  color: #64748B;
-  display: block;
-  margin-bottom: 5px;
+
+/* Section heads with step badges */
+.mf-section-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(46, 76, 140, 0.112);
 }
-.dark-input-box,
-.dark-select-box {
-  background: #FFFFFF;
-  border: 1.5px solid transparent;
-  border-radius: 8px;
-  padding: 12px 14px;
-  font-size: 14.5px;
-  font-family: var(--font-main);
-  color: var(--text-dark);
-  min-height: 46px;
-  width: 100%;
-}
-.dark-input-box:focus,
-.dark-select-box:focus,
-.dark-textarea-box:focus {
-  outline: none;
-  border-color: var(--gold-btn);
-}
-.dark-textarea-box {
-  background: #FFFFFF;
-  border: 1.5px solid transparent;
-  border-radius: 8px;
-  padding: 12px 14px;
-  font-size: 14.5px;
-  font-family: var(--font-main);
-  color: var(--text-dark);
-  min-height: 80px;
-  width: 100%;
-  resize: vertical;
-}
-.form-section-header {
-  margin-top: 20px;
-  margin-bottom: 4px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-.form-section-num-title {
-  font-size: 14px;
+.mf-step-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--royal-blue) 0%, var(--cerulean) 100%);
+  color: #FFFFFF;
+  font-size: 16px;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-btn);
-}
-.form-section-subtext {
-  font-size: 12.5px;
-  color: #94A3B8;
-  margin-top: 4px;
-  font-weight: 400;
-}
-.checkbox-pills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  margin-top: 6px;
-}
-.pill-checkbox-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-size: 13.5px;
-  color: #E2E8F0;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 18px -6px rgba(46, 76, 140, 0.44);
+}
+.mf-section-title {
+  font-size: clamp(18px, 2vw, 21px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  padding-top: 7px;
+}
+.mf-section-sub {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* Inputs */
+.mf-input,
+.mf-select,
+.mf-textarea {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #C4DCF1;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 16.5px;
+  font-family: var(--font-main);
+  color: var(--text-heading);
+  min-height: 54px;
+  box-shadow: 0 1px 2px rgba(15, 30, 61, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.mf-input::placeholder,
+.mf-textarea::placeholder {
+  color: #94A3B8;
+}
+.mf-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 46px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232E4C8C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+.mf-select:has(option[value=""]:checked) {
+  color: #94A3B8;
+}
+.mf-textarea {
+  min-height: 116px;
+  resize: vertical;
+  line-height: 1.55;
+}
+.mf-input:hover,
+.mf-select:hover,
+.mf-textarea:hover {
+  border-color: #9CC2E6;
+}
+.mf-input:focus,
+.mf-select:focus,
+.mf-textarea:focus {
+  outline: none;
+  border-color: var(--royal-blue);
+  box-shadow: 0 0 0 4px rgba(46, 76, 140, 0.096);
+}
+
+/* Interest pills */
+.mf-pills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+.mf-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #C4DCF1;
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--navy-dark);
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.pill-checkbox-item:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--cyan-accent);
+.mf-pill:hover {
+  border-color: var(--cerulean);
+  box-shadow: 0 8px 18px -10px rgba(27, 120, 190, 0.5);
+  transform: translateY(-1px);
 }
-.pill-checkbox-item input[type="checkbox"] {
-  accent-color: var(--gold-btn);
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-.declaration-notice-box {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 16px;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #94A3B8;
-  margin-top: 10px;
-}
-.declaration-checkbox-wrap {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 12px;
-  font-size: 13.5px;
-  color: #E2E8F0;
-  cursor: pointer;
-  line-height: 1.5;
-}
-.declaration-checkbox-wrap input[type="checkbox"] {
-  accent-color: var(--gold-btn);
+.mf-pill input[type="checkbox"] {
+  accent-color: var(--royal-blue);
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.mf-pill:has(input:checked) {
+  background: #EAF2FC;
+  border-color: var(--royal-blue);
+  color: var(--royal-blue);
+}
+
+/* Declaration */
+.mf-declaration {
+  background: #FFFFFF;
+  border: 1.5px solid #C4DCF1;
+  border-left: 4px solid var(--gold-btn);
+  border-radius: 14px;
+  padding: 20px 22px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+.mf-declaration strong {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 8px;
+}
+.mf-declaration-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed #C4DCF1;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--navy-dark);
+  line-height: 1.5;
+  cursor: pointer;
+}
+.mf-declaration-check input[type="checkbox"] {
+  accent-color: var(--royal-blue);
+  width: 20px;
+  height: 20px;
   margin-top: 2px;
   flex-shrink: 0;
   cursor: pointer;
 }
 
-.btn-confirm-seat-gold {
+/* Submit + error */
+.btn-submit-membership {
+  width: 100%;
   background: var(--gold-btn);
-  color: #261704;
-  padding: 14px 28px;
+  color: #2B1E08;
+  padding: 17px 28px;
   border-radius: var(--r-pill);
-  font-size: 15px;
+  font-size: 17.5px;
   font-weight: 800;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
+  margin-top: 8px;
+  box-shadow: 0 16px 32px -10px rgba(216, 167, 94, 0.48);
   transition: all 0.2s ease;
-  margin-top: 6px;
-  box-shadow: 0 10px 24px -4px rgba(229, 168, 59, 0.4);
 }
-.btn-confirm-seat-gold:hover {
+.btn-submit-membership:hover {
   background: var(--gold-hover);
   transform: translateY(-2px);
+  box-shadow: 0 20px 36px -10px rgba(216, 167, 94, 0.56);
 }
-.dark-form-error {
-  font-size: 13px;
-  color: #FCA5A5;
+.btn-submit-membership:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+.mf-error {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #B91C1C;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 10px;
+  padding: 12px 16px;
   text-align: center;
   margin: 0;
+}
+
+/* Success state */
+.mf-success {
+  display: none;
+  padding: clamp(28px, 4vw, 44px) 16px;
+  text-align: center;
+}
+.mf-success-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid var(--gold-btn);
+  color: var(--gold-hover);
+  font-size: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 14px 30px -12px rgba(216, 167, 94, 0.44);
+}
+.mf-success h3 {
+  font-size: clamp(26px, 3.2vw, 34px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.mf-success p {
+  color: var(--text-muted);
+  font-size: 17px;
+  max-width: 560px;
+  margin: 0 auto 22px;
+  line-height: 1.65;
+}
+.mf-success-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  padding-top: 18px;
+  border-top: 1px solid rgba(46, 76, 140, 0.112);
 }
 
 /* ============================================================
@@ -1448,35 +1357,13 @@ button {
   color: inherit;
 }
 .footer-chapter-email a:hover {
-  color: #FFD97A;
+  color: #EBD39A;
 }
 .footer-center-credo {
   font-size: 14.5px;
   font-weight: 600;
-  color: #FFD97A;
+  color: #EBD39A;
 }
-.footer-social-icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.social-circle-link {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  font-size: 13px;
-  transition: all 0.2s ease;
-}
-.social-circle-link:hover {
-  background: var(--royal-blue);
-  border-color: var(--royal-blue);
-}
-
 .footer-bottom-legal {
   display: flex;
   align-items: center;
@@ -1489,63 +1376,1168 @@ button {
 }
 
 /* ============================================================
-   9. POPUP MODAL (8-Second Auto-Trigger)
+   GLOBAL NETWORK · LOCAL VOICE (illustration split)
    ============================================================ */
-.rsvp-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  background: rgba(15, 30, 61, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.rsvp-modal-backdrop.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-.rsvp-modal-window {
+.sec-global-reach {
+  padding: clamp(40px, 6vw, 72px) 0 clamp(48px, 6vw, 80px);
   position: relative;
-  width: 100%;
-  max-width: 500px;
-  max-height: 90vh;
-  overflow-y: auto;
-  background: #FFFFFF;
-  border-radius: var(--r-lg);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
-  padding: clamp(24px, 4vw, 36px);
-  transform: translateY(20px) scale(0.96);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
 }
-.rsvp-modal-backdrop.active .rsvp-modal-window {
-  transform: translateY(0) scale(1);
+.global-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
 }
-.modal-close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #F1F5F9;
+.global-visual {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
-.modal-close-btn:hover {
+.global-visual::before {
+  content: "";
+  position: absolute;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(111, 180, 216, 0.16) 0%, rgba(46, 76, 140, 0.08) 45%, rgba(46, 76, 140, 0.0) 72%);
+  filter: blur(18px);
+  animation: auroraDrift 14s ease-in-out infinite;
+  pointer-events: none;
+}
+.global-visual::after {
+  content: "";
+  position: absolute;
+  inset: 8% 6%;
+  background-image: radial-gradient(rgba(46, 76, 140, 0.096) 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 0%, transparent 100%);
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 0%, transparent 100%);
+  pointer-events: none;
+}
+.global-visual img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  -webkit-mask-image: radial-gradient(ellipse 74% 80% at 50% 56%, #000 58%, transparent 100%);
+  mask-image: radial-gradient(ellipse 74% 80% at 50% 56%, #000 58%, transparent 100%);
+  filter: drop-shadow(0 24px 40px rgba(46, 76, 140, 0.128));
+}
+.global-copy {
+  display: flex;
+  flex-direction: column;
+}
+.global-eyebrow {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 12px;
+}
+.global-heading {
+  font-size: clamp(28px, 3.8vw, 42px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.global-heading em {
+  font-style: normal;
+  color: var(--royal-blue);
+}
+.global-heading::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--gold-btn);
+  margin: 14px 0 18px;
+  border-radius: 2px;
+}
+.global-copy p {
+  font-size: clamp(14.5px, 1.6vw, 16.5px);
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+.global-points {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+.global-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 14px 14px 13px;
+  box-shadow: 0 10px 24px -16px rgba(15, 30, 61, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.global-point:hover {
+  transform: translateY(-3px);
+  border-color: #BFD6EE;
+  box-shadow: 0 16px 30px -16px rgba(46, 76, 140, 0.32);
+}
+.global-point i {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #EAF2FC;
+  color: var(--royal-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.global-point svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.global-point strong {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--navy-dark);
+  line-height: 1.25;
+}
+.global-point span {
+  display: block;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-top: 3px;
+}
+.global-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: 26px;
   background: var(--royal-blue);
   color: #FFFFFF;
+  padding: 13px 26px;
+  border-radius: var(--r-pill);
+  font-size: 14.5px;
+  font-weight: 700;
+  box-shadow: 0 12px 26px -10px rgba(46, 76, 140, 0.44);
+  transition: all 0.2s ease;
+}
+.global-cta:hover {
+  background: var(--royal-hover);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   HERO · PURPOSE LAYER (status pill, CTA row, form-steps ribbon)
+   ============================================================ */
+.hero-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  max-width: 100%;
+  padding: 7px 14px 7px 11px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-mid);
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy-dark);
+  box-shadow: 0 10px 24px -16px rgba(28, 42, 71, 0.4);
+  margin-bottom: 18px;
+}
+.hero-status-pill em {
+  font-style: normal;
+  color: #3E8E68;
+  padding-left: 10px;
+  border-left: 1px solid var(--border-mid);
+}
+.pulse-dot {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4FA57B;
+  flex-shrink: 0;
+}
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #4FA57B;
+  opacity: 0;
+  animation: pulseRing 2.2s ease-out infinite;
+}
+@keyframes pulseRing {
+  0% { transform: scale(0.6); opacity: 0.7; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold-btn);
+  color: #2B1E08;
+  padding: 15px 28px;
+  border-radius: var(--r-pill);
+  font-size: 15.5px;
+  font-weight: 800;
+  box-shadow: 0 16px 32px -12px rgba(216, 167, 94, 0.7);
+  transition: all 0.2s ease;
+}
+.btn-hero-primary:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px -12px rgba(216, 167, 94, 0.8);
+}
+.btn-hero-primary span:last-child {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.btn-hero-primary:hover span:last-child {
+  transform: translateX(4px);
+}
+.btn-hero-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  color: var(--navy-dark);
+  border: 1.5px solid var(--border-mid);
+  padding: 13.5px 22px;
+  border-radius: var(--r-pill);
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.btn-hero-ghost:hover {
+  border-color: var(--royal-blue);
+  color: var(--royal-blue);
+  transform: translateY(-2px);
+}
+.btn-hero-ghost svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-steps {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+}
+.hero-steps-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-right: 4px;
+}
+.hero-steps li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px 6px 7px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--border-light);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+.hero-steps li a b {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #EAF2FC;
+  color: var(--royal-blue);
+  font-size: 10.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.hero-steps li a:hover {
+  color: var(--royal-blue);
+  background: #FFFFFF;
+  border-color: #BFD6EE;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px -12px rgba(46, 76, 140, 0.4);
+}
+.hero-steps li a:hover b {
+  background: var(--royal-blue);
+  color: #FFFFFF;
+}
+.hero-stat-row {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+.mf-section-head,
+.sec-journey {
+  scroll-margin-top: 110px;
+}
+
+/* ============================================================
+   HERO CREATIVE LAYER (aurora, badges, seal, stats, cue)
+   ============================================================ */
+.hero-visual-stage {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: 30px 28px 40px;
+}
+.hero-visual-stage img {
+  position: relative;
+  z-index: 2;
+}
+.hero-aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(52px);
+  opacity: 0.42;
+  pointer-events: none;
+  z-index: 0;
+  animation: auroraDrift 12s ease-in-out infinite;
+}
+.hero-aurora-1 {
+  width: 320px;
+  height: 320px;
+  background: #BFDCEE;
+  top: -20px;
+  left: -20px;
+}
+.hero-aurora-2 {
+  width: 280px;
+  height: 280px;
+  background: #8FA6D6;
+  bottom: -30px;
+  right: -20px;
+  opacity: 0.32;
+  animation-delay: -4s;
+}
+.hero-aurora-3 {
+  width: 220px;
+  height: 220px;
+  background: #F0D8A6;
+  bottom: 10px;
+  left: 22%;
+  opacity: 0.30;
+  animation-delay: -8s;
+}
+@keyframes auroraDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(18px, -14px) scale(1.08); }
+}
+
+/* Floating glass sector badges */
+.hero-float-badge {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 8px;
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: var(--r-pill);
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--navy-dark);
+  box-shadow: 0 14px 30px -12px rgba(46, 76, 140, 0.32);
+  white-space: nowrap;
+  animation: badgeFloat 6s ease-in-out infinite;
+}
+.hero-float-badge i {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--royal-blue) 0%, var(--cyan-accent) 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hero-float-badge svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hfb-1 { top: 4%; left: 0; }
+.hfb-2 { top: 24%; right: -4%; animation-delay: -2s; }
+.hfb-3 { top: 54%; left: -8%; animation-delay: -3.5s; }
+.hfb-4 { bottom: 2%; right: -6%; animation-delay: -5s; }
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Rotating centenary seal */
+.hero-seal {
+  position: absolute;
+  z-index: 4;
+  left: -6%;
+  bottom: -8%;
+  width: 118px;
+  height: 118px;
+}
+.hero-seal svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: sealSpin 24s linear infinite;
+}
+.hero-seal text {
+  font-family: var(--font-main);
+  font-size: 10.4px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  fill: var(--royal-blue);
+}
+.hero-seal-core {
+  position: absolute;
+  inset: 27px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid #D9E6F5;
+  box-shadow: 0 12px 28px -12px rgba(46, 76, 140, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-seal-core strong {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--royal-blue);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.hero-seal-core span {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-hover);
+  margin-top: 3px;
+}
+@keyframes sealSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Shimmer sweep on the heavy line */
+.typo-heavy-blue {
+  background: linear-gradient(90deg, #2E4C8C 0%, #2E4C8C 42%, #5F8CC4 50%, #2E4C8C 58%, #2E4C8C 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.16em;
+  margin-bottom: -0.16em;
+  animation: shimmerSweep 6s ease-in-out infinite;
+}
+@keyframes shimmerSweep {
+  0%, 35% { background-position: 110% 0; }
+  65%, 100% { background-position: -10% 0; }
+}
+
+/* Count-up stat chips */
+.hero-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  min-width: 128px;
+  padding: 12px 16px 11px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px -14px rgba(15, 30, 61, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hero-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -14px rgba(46, 76, 140, 0.32);
+}
+.hero-stat > strong {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--royal-blue);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.hero-stat > strong small {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--gold-hover);
+  margin-left: 2px;
+}
+.hero-stat > span {
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Scroll cue */
+.hero-scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: clamp(22px, 3vw, 34px) auto 0;
+  width: max-content;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  transition: color 0.2s ease;
+}
+.hero-scroll-cue:hover {
+  color: var(--royal-blue);
+}
+.hero-scroll-cue i {
+  position: relative;
+  width: 22px;
+  height: 34px;
+  border: 2px solid currentColor;
+  border-radius: 12px;
+  opacity: 0.7;
+}
+.hero-scroll-cue i::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  width: 4px;
+  height: 7px;
+  border-radius: 2px;
+  background: currentColor;
+  transform: translateX(-50%);
+  animation: cueDrop 1.8s ease-in-out infinite;
+}
+@keyframes cueDrop {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  70% { transform: translate(-50%, 12px); opacity: 0; }
+  100% { transform: translate(-50%, 0); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-aurora, .hero-float-badge, .hero-seal svg, .typo-heavy-blue, .hero-scroll-cue i::after { animation: none; }
+}
+
+/* ============================================================
+   HERO DOT-GRID BACKDROP
+   ============================================================ */
+.sec-hero-split::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(46, 76, 140, 0.088) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 40%, #000 0%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 80% at 50% 40%, #000 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.sec-hero-split > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   SECTORAL COMMITTEES MARQUEE
+   ============================================================ */
+.sec-sector-marquee {
+  padding: 0 0 clamp(28px, 4vw, 44px);
+}
+.sector-marquee-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 16px;
+}
+.sector-marquee-head::before,
+.sector-marquee-head::after {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold-btn);
+}
+.sector-marquee {
+  overflow: hidden;
+  position: relative;
+  padding: 6px 0 14px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+}
+.sector-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: sectorScroll 42s linear infinite;
+}
+.sector-marquee:hover .sector-track {
+  animation-play-state: paused;
+}
+.sector-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-pill);
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy-dark);
+  white-space: nowrap;
+  box-shadow: 0 8px 18px -12px rgba(15, 30, 61, 0.35);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.sector-chip:hover {
+  border-color: var(--cerulean);
+  transform: translateY(-2px);
+}
+.sector-chip i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--royal-blue) 0%, var(--cyan-accent) 100%);
+  flex-shrink: 0;
+}
+@keyframes sectorScroll {
+  to { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   MEMBERSHIP JOURNEY STEPPER
+   ============================================================ */
+.sec-journey {
+  padding: 0 0 clamp(22px, 3vw, 30px);
+}
+.journey-strip {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 22px;
+  padding: clamp(24px, 3.5vw, 34px) clamp(18px, 3vw, 32px);
+  box-shadow: var(--shadow-card);
+}
+.journey-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.journey-steps::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: calc(100% / 6);
+  right: calc(100% / 6);
+  height: 2px;
+  background: linear-gradient(90deg, var(--royal-blue) 0%, var(--cyan-accent) 100%);
+  opacity: 0.3;
+}
+.journey-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 8px;
+}
+.journey-node {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid var(--royal-blue);
+  color: var(--royal-blue);
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 7px #EAF2FC;
+  margin-bottom: 16px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.journey-step:hover .journey-node {
+  background: var(--royal-blue);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+.journey-title {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: var(--navy-dark);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+.journey-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   APPLICATION PROGRESS BAR (inside form card)
+   ============================================================ */
+.mf-progress {
+  margin: 4px 0 6px;
+}
+.mf-progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 8px;
+}
+.mf-progress-meta span:last-child {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+.mf-progress-track {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(46, 76, 140, 0.08);
+  overflow: hidden;
+}
+.mf-progress-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--royal-blue) 0%, var(--cyan-accent) 100%);
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mf-progress.is-complete .mf-progress-fill {
+  background: linear-gradient(90deg, var(--gold-hover) 0%, var(--gold-btn) 100%);
+}
+.mf-progress.is-complete .mf-progress-meta span:last-child {
+  color: var(--gold-hover);
+}
+
+/* ============================================================
+   FLOATING APPLY CTA (mobile only)
+   ============================================================ */
+.floating-apply {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  z-index: 90;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: var(--royal-blue);
+  color: #FFFFFF;
+  padding: 13px 24px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 14px 30px -8px rgba(46, 76, 140, 0.48);
+  opacity: 0;
+  transform: translate(-50%, 24px);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.floating-apply.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .sector-track { animation: none; }
+  .sector-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .hero-map-col img { animation: none; }
+}
+
+/* ============================================================
+   POLISH LAYER · global refinements
+   ============================================================ */
+html {
+  scroll-padding-top: 96px;
+}
+::selection {
+  background: rgba(46, 76, 140, 0.18);
+  color: var(--navy-dark);
+}
+h1, h2, h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+:focus-visible {
+  outline: 3px solid rgba(46, 76, 140, 0.45);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.mf-input:focus-visible,
+.mf-select:focus-visible,
+.mf-textarea:focus-visible {
+  outline: none;
+}
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 300;
+  background: var(--royal-blue);
+  color: #FFFFFF;
+  padding: 10px 16px;
+  border-radius: 0 0 12px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header behaviour on scroll */
+.site-header {
+  transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+.site-header.is-scrolled {
+  padding: 8px 0;
+  box-shadow: 0 10px 30px -18px rgba(28, 42, 71, 0.35);
+}
+.header-logo-img {
+  transition: height 0.3s ease;
+}
+.site-header.is-scrolled .header-logo-img {
+  height: 56px;
+}
+.scroll-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  pointer-events: none;
+}
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(90deg, var(--royal-blue) 0%, var(--cyan-accent) 100%);
+  transition: width 0.12s linear;
+}
+
+/* CTA arrow micro-motion */
+.btn-reserve-nav span:last-child,
+.global-cta span:last-child,
+.btn-submit-membership span:last-child,
+.floating-apply span:last-child {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.btn-reserve-nav:hover span:last-child,
+.global-cta:hover span:last-child,
+.btn-submit-membership:hover span:last-child,
+.floating-apply:hover span:last-child {
+  transform: translateX(4px);
+}
+
+/* Hero entrance choreography */
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-eyebrow-tag,
+.hero-status-pill,
+.hero-display-h1 > span,
+.hero-description-p,
+.hero-cta-row,
+.hero-steps,
+.hero-stat-row,
+.hero-scroll-cue,
+.hero-visual-stage {
+  animation: heroRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-eyebrow-tag { animation-delay: 0s; }
+.hero-status-pill { animation-delay: 0.05s; }
+.hero-display-h1 > span:nth-child(1) { animation-delay: 0.12s; }
+.hero-display-h1 > span:nth-child(2) { animation-delay: 0.22s; }
+.hero-description-p { animation-delay: 0.44s; }
+.hero-cta-row { animation-delay: 0.54s; }
+.hero-steps { animation-delay: 0.62s; }
+.hero-stat-row { animation-delay: 0.7s; }
+.hero-scroll-cue { animation-delay: 0.82s; }
+.hero-visual-stage { animation-delay: 0.22s; }
+.typo-heavy-blue {
+  animation: shimmerSweep 6s ease-in-out infinite, heroRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0s, 0.32s;
+}
+.hero-map-col {
+  transition: transform 0.35s ease;
+  transform-style: preserve-3d;
+}
+
+/* Tagline dots: rotation timing indicator */
+.tagline-dot-btn.active {
+  position: relative;
+  overflow: hidden;
+  background: #CBD5E1;
+}
+.tagline-dot-btn.active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--royal-blue);
+  transform-origin: left center;
+  animation: dotFill 3.8s linear forwards;
+}
+.taglines-card-wrapper:hover .tagline-dot-btn.active::after {
+  animation-play-state: paused;
+}
+@keyframes dotFill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Pillars icon lift */
+.pillar-round-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.pillar-single-item:hover .pillar-round-icon {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 12px 24px -12px rgba(46, 76, 140, 0.45);
+}
+
+/* Partner logos: settle to full presence on hover */
+.collab-item img {
+  opacity: 0.86;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.collab-item:hover img {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+/* Council cards: staggered reveal + colour on hover */
+.maker-profile-card.reveal {
+  transition: none;
+}
+.maker-profile-card.reveal.is-visible {
+  animation: heroRise 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 70ms);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.maker-profile-card.is-visible:hover {
+  transform: translateY(-4px);
+}
+.maker-card-photo img {
+  transition: filter 0.45s ease, transform 0.45s ease;
+}
+.maker-profile-card:hover .maker-card-photo img {
+  filter: grayscale(0) contrast(1.02);
+}
+
+/* Form refinements */
+.mf-label {
+  transition: color 0.2s ease;
+}
+.mf-field:focus-within > .mf-label {
+  color: var(--royal-blue);
+}
+.mf-input:user-invalid,
+.mf-select:user-invalid,
+.mf-textarea:user-invalid {
+  border-color: #D98C8C;
+  box-shadow: 0 0 0 4px rgba(217, 140, 140, 0.14);
+}
+.mf-field:has(:user-invalid) > .mf-label {
+  color: #B35C5C;
+}
+.btn-submit-membership.is-loading {
+  pointer-events: none;
+}
+.mf-spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(43, 30, 8, 0.25);
+  border-top-color: #2B1E08;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.mf-success {
+  animation: heroRise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.mf-success-icon {
+  animation: popIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.mf-success-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.mf-success-icon svg path {
+  stroke-dasharray: 26;
+  stroke-dashoffset: 26;
+  animation: drawCheck 0.6s 0.25s ease forwards;
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes drawCheck {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Footer hairline + back-to-top */
+.site-footer {
+  position: relative;
+}
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-btn) 0%, var(--royal-blue) 50%, var(--cyan-accent) 100%);
+}
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid var(--border-mid);
+  color: var(--royal-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 30px -14px rgba(28, 42, 71, 0.4);
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, color 0.2s ease;
+}
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: var(--royal-blue);
+  color: #FFFFFF;
+}
+.back-to-top svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow-tag, .hero-status-pill, .hero-display-h1 > span, .hero-description-p, .hero-cta-row, .hero-steps, .hero-stat-row, .hero-scroll-cue, .hero-visual-stage, .pulse-dot::after,
+  .typo-heavy-blue, .maker-profile-card.reveal.is-visible, .mf-success, .mf-success-icon, .tagline-dot-btn.active::after {
+    animation: none;
+  }
+  .mf-success-icon svg path { stroke-dashoffset: 0; }
+  .tagline-dot-btn.active { background: var(--royal-blue); }
 }
 
 /* ============================================================
@@ -1556,12 +2548,22 @@ button {
   .hero-split-grid { grid-template-columns: 1fr; text-align: center; }
   .hero-description-p { margin: 0 auto; }
   .hero-map-col { order: -1; }
-  .hero-map-col img { max-width: 360px; }
+  .hero-visual-stage { max-width: 420px; padding: 24px 22px 34px; }
+  .hero-stat-row { justify-content: center; }
+  .hero-status-pill { align-self: center; }
+  .hero-cta-row, .hero-steps { justify-content: center; }
   .pillars-white-enclosure { grid-template-columns: 1fr; }
   .pillar-single-item:not(:last-child)::after { display: none; }
   .pillar-single-item:not(:last-child) { border-bottom: 1px solid var(--border-light); }
   .building-grid { grid-template-columns: 1fr; }
   .about-icc-panel { grid-template-columns: 1fr; }
+  .global-grid { grid-template-columns: 1fr; }
+  .global-visual { order: -1; }
+  .global-visual img { max-width: 520px; }
+  .global-copy { text-align: center; align-items: center; }
+  .global-heading::after { margin-left: auto; margin-right: auto; }
+  .global-points { text-align: left; width: 100%; }
+  .global-cta { align-self: center; }
   .about-founder { min-height: 380px; }
   .makers-profile-grid,
   .makers-profile-grid.grid-leaders { grid-template-columns: repeat(3, 1fr); }
@@ -1570,18 +2572,24 @@ button {
 
 @media (max-width: 768px) {
   .header-brand-tag { display: none; }
-  .event-card-meta-grid { grid-template-columns: 1fr; gap: 14px; }
-  .event-meta-col-item:not(:last-child)::after { display: none; }
-  .event-meta-col-item { padding: 0; }
-  .event-countdown-boxes-row { gap: 6px; }
-  .cd-digit-card { min-width: 64px; padding: 12px 8px; border-radius: 14px; }
-  .cd-big-num-bold { font-size: 26px; }
-  .cd-colon-separator { font-size: 18px; margin-top: -8px; }
+  .header-logo-wrap { position: static; transform: none; }
+  .header-inner { justify-content: space-between; }
   .makers-profile-grid,
   .makers-profile-grid.grid-leaders,
   .makers-profile-grid.grid-leaders-4 { grid-template-columns: repeat(2, 1fr); }
-  .dark-form-grid-2 { grid-template-columns: 1fr; }
+  .mf-grid-2 { grid-template-columns: 1fr; }
+  .journey-steps { grid-template-columns: 1fr; gap: 16px; }
+  .journey-steps::before { display: none; }
+  .journey-step { flex-direction: row; text-align: left; align-items: flex-start; gap: 14px; padding: 0; }
+  .journey-node { width: 42px; height: 42px; margin-bottom: 0; flex-shrink: 0; box-shadow: 0 0 0 5px #EAF2FC; }
+  .journey-desc { max-width: none; }
+  .journey-copy { flex: 1; min-width: 0; }
+  .floating-apply { display: inline-flex; }
+  .back-to-top { display: none; }
+  .hero-scroll-cue { display: none; }
+  .mf-pills { grid-template-columns: 1fr 1fr; }
   .about-icc-stats { grid-template-columns: repeat(3, 1fr); }
+  .global-points { grid-template-columns: 1fr; }
   .about-founder { min-height: 340px; }
   .collab-panel { grid-template-columns: 1fr 1fr; }
   .collab-item {
@@ -1596,6 +2604,18 @@ button {
   .header-logo-img { height: 52px; }
   .btn-reserve-nav { padding: 7px 14px; font-size: 12px; }
   .hero-display-h1 { font-size: clamp(38px, 12vw, 54px); }
+  .hero-visual-stage { max-width: 340px; padding: 18px 16px 30px; }
+  .hfb-2, .hfb-3 { display: none; }
+  .hero-float-badge { font-size: 11.5px; padding: 6px 12px 6px 6px; }
+  .hero-seal { width: 92px; height: 92px; left: -4%; bottom: -4%; }
+  .hfb-4 { bottom: -3%; right: -4%; }
+  .hero-seal-core { inset: 21px; }
+  .hero-seal-core strong { font-size: 17px; }
+  .hero-seal-core span { font-size: 6.5px; }
+  .hero-stat { min-width: calc(50% - 6px); flex: 1; }
+  .hero-cta-row { flex-direction: column; align-items: stretch; }
+  .btn-hero-primary, .btn-hero-ghost { justify-content: center; }
+  .hero-steps-label { width: 100%; text-align: center; margin: 0 0 2px; }
   .about-icc-copy-col::before { display: none; }
   .about-founder { min-height: 300px; }
   .secretariat-band {
@@ -1608,12 +2628,16 @@ button {
   .makers-profile-grid,
   .makers-profile-grid.grid-leaders,
   .makers-profile-grid.grid-leaders-4 { grid-template-columns: 1fr; }
-  .event-card-btn-row { flex-direction: column; width: 100%; }
-  .btn-card-reserve-solid, .btn-card-calendar-outline { width: 100%; justify-content: center; }
+  .membership-form-card { border-radius: 20px; }
+  .mf-pills { grid-template-columns: 1fr; }
+  .mf-section-head { gap: 12px; }
+  .mf-step-badge { width: 34px; height: 34px; font-size: 14px; }
 }
 </style>
 </head>
 <body>
+
+<a href="#membership-form" class="skip-link">Skip to membership form</a>
 
 <!-- ============================================================
      1. INSTITUTIONAL HEADER BAR
@@ -1642,6 +2666,7 @@ button {
     </div>
 
   </div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
 </header>
 
 <main id="main">
@@ -1666,6 +2691,12 @@ button {
       <!-- Left Typography Column -->
       <div class="hero-typo-col">
         
+        <div class="hero-status-pill">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>Membership Interest Form</span>
+          <em>Now open</em>
+        </div>
+
         <h1 class="hero-display-h1">
           <span class="typo-thin" data-en="shaping mp's" data-hi="मध्य प्रदेश का">shaping mp's</span>
           <span class="typo-mid">
@@ -1675,21 +2706,90 @@ button {
           <span class="typo-heavy-blue" data-en="makers of progress." data-hi="मेकर्स ऑफ़ प्रोग्रेस।">makers of progress.</span>
         </h1>
 
-        <p class="hero-description-p" data-en="Tell us about yourself and your business. Membership is by invitation — we'll be in touch once we've reviewed your application." data-hi="अपने और अपने व्यवसाय के बारे में बताएं। सदस्यता आमंत्रण द्वारा है — आपके आवेदन की समीक्षा के बाद हम आपसे संपर्क करेंगे।">
-          Tell us about yourself and your business. Membership is by invitation — we'll be in touch once we've reviewed your application.
+        <p class="hero-description-p">
+          You&rsquo;re on the official <strong>Membership Interest Form</strong> for the ICC Madhya Pradesh Chapter. Tell us about yourself and your business &mdash; the Council reviews every application personally, and membership is by invitation.
         </p>
 
-        <!-- Butterfly accent -->
-        <div class="hero-butterfly-accent" aria-hidden="true">
-          <svg viewBox="0 0 32 32" style="width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;"><path d="M16 14 C12 6, 4 8, 4 16 C4 22, 12 24, 16 18 C20 24, 28 22, 28 16 C28 8, 20 6, 16 14 Z"/></svg>
+        <div class="hero-cta-row">
+          <a href="#membership-form" class="btn-hero-primary">
+            <span>Start the form</span>
+            <span>&rarr;</span>
+          </a>
+          <a href="#journey" class="btn-hero-ghost">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg>
+            <span>How it works</span>
+          </a>
+        </div>
+
+        <ol class="hero-steps" aria-label="The form has five sections">
+          <li class="hero-steps-label" aria-hidden="true">5 sections</li>
+          <li><a href="#mf-sec-1"><b>01</b>Personal</a></li>
+          <li><a href="#mf-sec-2"><b>02</b>Company</a></li>
+          <li><a href="#mf-sec-3"><b>03</b>Why ICC MP</a></li>
+          <li><a href="#mf-sec-4"><b>04</b>Interests</a></li>
+          <li><a href="#mf-sec-5"><b>05</b>References</a></li>
+        </ol>
+
+        <!-- Count-up stat chips -->
+        <div class="hero-stat-row" id="hero-stat-row">
+          <div class="hero-stat">
+            <strong><span class="count-up" data-count="100">0</span></strong>
+            <span>Years of Service</span>
+          </div>
+          <div class="hero-stat">
+            <strong><span class="count-up" data-count="15">0</span><small>+</small></strong>
+            <span>State Offices</span>
+          </div>
+          <div class="hero-stat">
+            <strong><span class="count-up" data-count="25">0</span><small>+</small></strong>
+            <span>Countries</span>
+          </div>
         </div>
 
       </div>
 
-      <!-- Right Artwork Map Column (Transparent PNG) -->
+      <!-- Right Artwork Map Column (Transparent PNG + creative layer) -->
       <div class="hero-map-col">
-        <img src="assets/logos/theme-logo-transparent.png" alt="Makers of Progress — Madhya Pradesh Chapter Theme Logo">
+        <div class="hero-visual-stage">
+          <div class="hero-aurora hero-aurora-1" aria-hidden="true"></div>
+          <div class="hero-aurora hero-aurora-2" aria-hidden="true"></div>
+          <div class="hero-aurora hero-aurora-3" aria-hidden="true"></div>
+
+          <img src="assets/logos/theme-logo-transparent.png" alt="Makers of Progress — Madhya Pradesh Chapter Theme Logo">
+
+          <div class="hero-float-badge hfb-1" aria-hidden="true">
+            <i><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM4 10h1M4 14h1M19 10h1M19 14h1M10 4v1M14 4v1M10 19v1M14 19v1"/></svg></i>
+            <span>Technology</span>
+          </div>
+          <div class="hero-float-badge hfb-2" aria-hidden="true">
+            <i><svg viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></i>
+            <span>FMCG</span>
+          </div>
+          <div class="hero-float-badge hfb-3" aria-hidden="true">
+            <i><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9l6-4 6 4v11"/><path d="M10 20v-5h4v5"/></svg></i>
+            <span>Infrastructure</span>
+          </div>
+          <div class="hero-float-badge hfb-4" aria-hidden="true">
+            <i><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></i>
+            <span>Real Estate</span>
+          </div>
+
+          <div class="hero-seal" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <defs>
+                <path id="hero-seal-path" d="M60,60 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/>
+              </defs>
+              <text><textPath href="#hero-seal-path">A CENTURY OF SERVICE &bull; 1925 &mdash; 2025 &bull; </textPath></text>
+            </svg>
+            <div class="hero-seal-core"><strong>100</strong><span>Years</span></div>
+          </div>
+        </div>
       </div>
+
+      <a href="#membership-form" class="hero-scroll-cue">
+        <span>Scroll to apply</span>
+        <i aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 </section>
@@ -1740,7 +2840,7 @@ button {
        ============================================================ -->
   <section class="sec-mission-manifesto" id="mission-manifesto">
     <div class="container">
-      <div class="mission-manifesto-card">
+      <div class="mission-manifesto-card reveal">
         
         <!-- Left Accent Bar -->
         <div class="mission-accent-bar" aria-hidden="true"></div>
@@ -1759,11 +2859,348 @@ button {
   </section>
 
   <!-- ============================================================
+       SECTORAL COMMITTEES MARQUEE
+       ============================================================ -->
+  <section class="sec-sector-marquee" id="sectors" aria-label="Sectoral committees">
+    <div class="container">
+      <p class="sector-marquee-head">Sectoral Committees</p>
+    </div>
+    <div class="sector-marquee">
+      <div class="sector-track">
+            <span class="sector-chip"><i aria-hidden="true"></i>Retail</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Manufacturing</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>FMCG</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Real Estate</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Infrastructure</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Capital Markets &amp; Investments</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Technology</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Health &amp; Hygiene</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Hospitality</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>International Relations &amp; Trade</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Pharma &amp; Life Sciences</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Renewable Energy</span>
+            <span class="sector-chip"><i aria-hidden="true"></i>Agriculture &amp; Food Processing</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Retail</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Manufacturing</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>FMCG</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Real Estate</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Infrastructure</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Capital Markets &amp; Investments</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Technology</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Health &amp; Hygiene</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Hospitality</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>International Relations &amp; Trade</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Pharma &amp; Life Sciences</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Renewable Energy</span>
+            <span class="sector-chip" aria-hidden="true"><i aria-hidden="true"></i>Agriculture &amp; Food Processing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MEMBERSHIP JOURNEY STEPPER
+       ============================================================ -->
+  <section class="sec-journey" id="journey" aria-label="Your membership journey">
+    <div class="container">
+      <div class="journey-strip reveal">
+        <div class="journey-steps">
+          <div class="journey-step">
+            <div class="journey-node">01</div>
+            <div class="journey-copy">
+              <div class="journey-title">Share your interest</div>
+              <p class="journey-desc">Complete the form below with your profile and business details.</p>
+            </div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-node">02</div>
+            <div class="journey-copy">
+              <div class="journey-title">Council review</div>
+              <p class="journey-desc">The ICC MP Council personally reviews every application received.</p>
+            </div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-node">03</div>
+            <div class="journey-copy">
+              <div class="journey-title">Invitation to join</div>
+              <p class="journey-desc">Successful applicants receive a formal invitation and onboarding from the Chapter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. MEMBERSHIP INTEREST FORM (Sky-Blue Card)
+       ============================================================ -->
+  <section class="sec-membership-form" id="membership-form">
+    <div class="container">
+      <div class="membership-form-card reveal">
+
+        <div class="mf-head">
+          <p class="mf-eyebrow">Apply for Membership</p>
+          <h2 class="mf-title">ICC Madhya Pradesh <em>Membership Interest Form</em></h2>
+          <p class="mf-subtitle">Tell us about yourself and your business. Membership is by invitation — we'll be in touch once we've reviewed your application.</p>
+        </div>
+
+        <div class="mf-progress" id="mf-progress">
+          <div class="mf-progress-meta">
+            <span>Application progress</span>
+            <span id="mf-progress-pct">0%</span>
+          </div>
+          <div class="mf-progress-track" role="progressbar" aria-label="Application progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="mf-progress-track">
+            <div class="mf-progress-fill" id="mf-progress-fill"></div>
+          </div>
+        </div>
+
+        <form class="mf-form" id="icc-membership-form" onsubmit="handleMembershipSubmit(event)">
+
+          <!-- SECTION 1: Personal Details -->
+          <div class="mf-section-head" id="mf-sec-1">
+            <span class="mf-step-badge" aria-hidden="true">1</span>
+            <div>
+              <div class="mf-section-title">Personal Details</div>
+            </div>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-name">Full Name *</label>
+              <input type="text" class="mf-input" id="mf-name" placeholder="Enter your Full Name" required autocomplete="name">
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-phone">Mobile Number *</label>
+              <input type="tel" class="mf-input" id="mf-phone" placeholder="Enter your Mobile Number" required autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-email">Email Address *</label>
+              <input type="email" class="mf-input" id="mf-email" placeholder="Enter your Email Address" required autocomplete="email">
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-city">City *</label>
+              <input type="text" class="mf-input" id="mf-city" placeholder="Example: Indore" required autocomplete="address-level2">
+            </div>
+          </div>
+
+          <!-- SECTION 2: Company Details -->
+          <div class="mf-section-head" id="mf-sec-2">
+            <span class="mf-step-badge" aria-hidden="true">2</span>
+            <div>
+              <div class="mf-section-title">Company Details</div>
+            </div>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-company">Company Name *</label>
+              <input type="text" class="mf-input" id="mf-company" placeholder="Example: Your Company Pvt. Ltd." required autocomplete="organization">
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-desig">Designation / Title *</label>
+              <input type="text" class="mf-input" id="mf-desig" placeholder="Example: Managing Director" required autocomplete="organization-title">
+            </div>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-industry">Industry / Sector *</label>
+              <select class="mf-select" id="mf-industry" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="Retail">Retail</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="FMCG">FMCG</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Infrastructure">Infrastructure</option>
+                <option value="Capital Markets & Investments">Capital Markets &amp; Investments</option>
+                <option value="Technology">Technology</option>
+                <option value="Health & Hygiene">Health &amp; Hygiene</option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="International Relations & Trade">International Relations &amp; Trade</option>
+                <option value="Pharma & Life Sciences">Pharma &amp; Life Sciences</option>
+                <option value="Renewable Energy">Renewable Energy</option>
+                <option value="Agriculture & Food Processing">Agriculture &amp; Food Processing</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-est-year">Year of Establishment *</label>
+              <input type="text" class="mf-input" id="mf-est-year" placeholder="Example: 2005" required inputmode="numeric">
+            </div>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-turnover">Annual Turnover</label>
+              <select class="mf-select" id="mf-turnover">
+                <option value="" disabled selected>Select range</option>
+                <option value="Under ₹1 Cr">Under ₹1 Cr</option>
+                <option value="₹1 Cr – ₹10 Cr">₹1 Cr – ₹10 Cr</option>
+                <option value="₹10 Cr – ₹50 Cr">₹10 Cr – ₹50 Cr</option>
+                <option value="₹50 Cr – ₹100 Cr">₹50 Cr – ₹100 Cr</option>
+                <option value="₹100 Cr – ₹500 Cr">₹100 Cr – ₹500 Cr</option>
+                <option value="₹500 Cr+">₹500 Cr+</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-employees">Number of Employees</label>
+              <select class="mf-select" id="mf-employees">
+                <option value="" disabled selected>Select range</option>
+                <option value="1 – 10">1 – 10</option>
+                <option value="11 – 50">11 – 50</option>
+                <option value="51 – 200">51 – 200</option>
+                <option value="201 – 500">201 – 500</option>
+                <option value="500+">500+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mf-field">
+            <label class="mf-label" for="mf-nature">Nature of Business *</label>
+            <textarea class="mf-textarea" id="mf-nature" placeholder="Brief description of what your company does" required></textarea>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-website">Company Website</label>
+              <input type="url" class="mf-input" id="mf-website" placeholder="https://yourcompany.com" autocomplete="url">
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-linkedin">Personal LinkedIn Profile</label>
+              <input type="url" class="mf-input" id="mf-linkedin" placeholder="https://linkedin.com/in/profile">
+            </div>
+          </div>
+
+          <!-- SECTION 3: Why ICC MP -->
+          <div class="mf-section-head" id="mf-sec-3">
+            <span class="mf-step-badge" aria-hidden="true">3</span>
+            <div>
+              <div class="mf-section-title">Why ICC MP</div>
+            </div>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-hear-about">How did you hear about ICC MP? *</label>
+              <select class="mf-select" id="mf-hear-about" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="Council member referral">Council member referral</option>
+                <option value="Launch event">Launch event</option>
+                <option value="LinkedIn / Social media">LinkedIn / Social media</option>
+                <option value="Press / Media">Press / Media</option>
+                <option value="ICC HQ">ICC HQ</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-referrer">If referred, name of referring member</label>
+              <input type="text" class="mf-input" id="mf-referrer" placeholder="Referring member name">
+            </div>
+          </div>
+
+          <div class="mf-field">
+            <label class="mf-label" for="mf-why-join">Why do you want to join ICC MP? *</label>
+            <textarea class="mf-textarea" id="mf-why-join" placeholder="What draws you to the chamber?" required></textarea>
+          </div>
+
+          <div class="mf-field">
+            <label class="mf-label" for="mf-contribution">What do you hope to contribute to the chamber?</label>
+            <textarea class="mf-textarea" id="mf-contribution" placeholder="Skills, networks, expertise, or time you'd bring to the table"></textarea>
+          </div>
+
+          <!-- SECTION 4: Interests -->
+          <div class="mf-section-head" id="mf-sec-4">
+            <span class="mf-step-badge" aria-hidden="true">4</span>
+            <div>
+              <div class="mf-section-title">Interests</div>
+            </div>
+          </div>
+
+          <div class="mf-field">
+            <span class="mf-label">Areas of interest — Select one or more</span>
+            <div class="mf-pills">
+              <label class="mf-pill"><input type="checkbox" name="interest" value="Policy advocacy"> Policy advocacy</label>
+              <label class="mf-pill"><input type="checkbox" name="interest" value="Trade & exports"> Trade &amp; exports</label>
+              <label class="mf-pill"><input type="checkbox" name="interest" value="Networking"> Networking</label>
+              <label class="mf-pill"><input type="checkbox" name="interest" value="Investor access"> Investor access</label>
+              <label class="mf-pill"><input type="checkbox" name="interest" value="Government liaison"> Government liaison</label>
+              <label class="mf-pill"><input type="checkbox" name="interest" value="International business"> International business</label>
+              <label class="mf-pill"><input type="checkbox" name="interest" value="Industry events"> Industry events</label>
+              <label class="mf-pill"><input type="checkbox" name="interest" value="Mentorship & learning"> Mentorship &amp; learning</label>
+            </div>
+          </div>
+
+          <!-- SECTION 5: References -->
+          <div class="mf-section-head" id="mf-sec-5">
+            <span class="mf-step-badge" aria-hidden="true">5</span>
+            <div>
+              <div class="mf-section-title">References</div>
+              <p class="mf-section-sub">At least one reference should ideally be a current ICC MP member or someone known to the council.</p>
+            </div>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-ref1-name">Reference 1 — Name</label>
+              <input type="text" class="mf-input" id="mf-ref1-name" placeholder="Full name">
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-ref1-contact">Reference 1 — Contact</label>
+              <input type="text" class="mf-input" id="mf-ref1-contact" placeholder="Mobile or email">
+            </div>
+          </div>
+
+          <div class="mf-grid-2">
+            <div class="mf-field">
+              <label class="mf-label" for="mf-ref2-name">Reference 2 — Name</label>
+              <input type="text" class="mf-input" id="mf-ref2-name" placeholder="Full name">
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="mf-ref2-contact">Reference 2 — Contact</label>
+              <input type="text" class="mf-input" id="mf-ref2-contact" placeholder="Mobile or email">
+            </div>
+          </div>
+
+          <!-- Declaration -->
+          <div class="mf-declaration">
+            <strong>Declaration</strong>
+            Membership of ICC Madhya Pradesh is by invitation and subject to approval by the Council. Submitting this form does not guarantee membership. The information you provide will be used solely for the purpose of evaluating your application and will not be shared outside the council without your consent.
+
+            <label class="mf-declaration-check">
+              <input type="checkbox" id="mf-declaration-confirm" required>
+              <span>I confirm that the information provided is accurate and understand that membership is subject to approval by the ICC MP Council. *</span>
+            </label>
+          </div>
+
+          <p class="mf-error" id="membership-form-error" hidden>Could not submit your application. Please check the fields and try again.</p>
+
+          <button type="submit" class="btn-submit-membership" id="btn-submit-membership">
+            <span>Submit Application</span>
+            <span>&rarr;</span>
+          </button>
+        </form>
+
+        <!-- Success Message View -->
+        <div class="mf-success" id="membership-success">
+          <div class="mf-success-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h3>Thank you for your interest.</h3>
+          <p>We've received your application. The ICC MP Council will review it and be in touch with you.</p>
+          <div class="mf-success-tag">ICC Madhya Pradesh — Makers of Progress.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        ABOUT ICC
        ============================================================ -->
   <section class="sec-about-icc" id="about-icc">
     <div class="container">
-      <div class="about-icc-panel">
+      <div class="about-icc-panel reveal">
         <div class="about-icc-copy-col">
           <p class="about-icc-eyebrow">A Century of Service</p>
           <h2 class="about-icc-heading">About ICC</h2>
@@ -1796,54 +3233,42 @@ button {
   </section>
 
   <!-- ============================================================
-       3. FLOATING MEMBERSHIP HIGHLIGHT CARD
+       GLOBAL NETWORK · LOCAL VOICE
        ============================================================ -->
-  <section class="sec-event-card-wrap">
+  <section class="sec-global-reach" id="global-reach">
     <div class="container">
-      <div class="event-floating-card">
-        
-        <!-- Top Meta 3-Column Grid -->
-        <div class="event-card-meta-grid">
-          
-          <!-- Col 1: Access -->
-          <div class="event-meta-col-item">
-            <div class="meta-circle-badge">
-              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-            </div>
-            <div class="meta-stack-txt">
-              <div class="meta-main-bold" data-en="By Invitation Only" data-hi="केवल आमंत्रण द्वारा">By Invitation Only</div>
-              <div class="meta-sub-muted" data-en="Reviewed by Council" data-hi="परिषद द्वारा समीक्षा">Reviewed by Council</div>
-            </div>
-          </div>
+      <div class="global-grid">
 
-          <!-- Col 2: Response -->
-          <div class="event-meta-col-item">
-            <div class="meta-circle-badge">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="meta-stack-txt">
-              <div class="meta-main-bold" data-en="5 Working Days" data-hi="5 कार्य दिवस">5 Working Days</div>
-              <div class="meta-sub-muted" data-en="Application Response Time" data-hi="आवेदन प्रतिक्रिया समय">Application Response Time</div>
-            </div>
-          </div>
-
-          <!-- Col 3: Network -->
-          <div class="event-meta-col-item">
-            <div class="meta-circle-badge">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-            </div>
-            <div class="meta-stack-txt">
-              <div class="meta-main-bold" data-en="Statewide &amp; Global" data-hi="राज्यव्यापी व वैश्विक">Statewide &amp; Global</div>
-              <div class="meta-sub-muted" data-en="Industry &amp; Policy Network" data-hi="उद्योग व नीति नेटवर्क">Industry &amp; Policy Network</div>
-            </div>
-          </div>
-
+        <div class="global-visual reveal">
+          <img src="assets/global-network.png" alt="Business leaders from diverse backgrounds looking up at a connected globe, with city skylines on either side" loading="lazy" decoding="async">
         </div>
 
-        <!-- Buttons Row -->
-        <div class="event-card-btn-row" style="margin-top: 20px;">
-          <a href="#membership-form" class="btn-card-reserve-solid">
-            <span>Fill Membership Form</span>
+        <div class="global-copy reveal">
+          <p class="global-eyebrow">Global Network &middot; Local Voice</p>
+          <h2 class="global-heading">From Madhya Pradesh <em>to the world.</em></h2>
+          <p>ICC connects its members to a network that spans 15 Indian states and 25 countries. As a member of the MP Chapter, you sit at the table where industry, government and global partners meet, with the Chapter carrying the state's voice outward and bringing opportunity home.</p>
+
+          <ul class="global-points">
+            <li class="global-point">
+              <i><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="16.5" cy="9.5" r="2.5"/><path d="M3 19c0-3.2 2.7-5.2 6-5.2s6 2 6 5.2"/><path d="M15.5 14.4c2.8 0 5.5 1.6 5.5 4.6"/></svg></i>
+              <div><strong>A connected community</strong><span>Peers, mentors and partners across sectors and states.</span></div>
+            </li>
+            <li class="global-point">
+              <i><svg viewBox="0 0 24 24"><path d="M4 19h16"/><path d="M6 16v-5M11 16V7M16 16v-3M21 16V4"/></svg></i>
+              <div><strong>Growth-led dialogue</strong><span>Policy thinking that unlocks investment and scale.</span></div>
+            </li>
+            <li class="global-point">
+              <i><svg viewBox="0 0 24 24"><path d="M12 21V11"/><path d="M12 13c0-4 3-7 8-7-0.5 4.5-3.5 7-8 7z"/><path d="M12 11C12 7.5 9.5 5 5 5c.4 4 2.8 6.5 7 6.5"/></svg></i>
+              <div><strong>Sustainable enterprise</strong><span>Responsible growth for the next generation of makers.</span></div>
+            </li>
+            <li class="global-point">
+              <i><svg viewBox="0 0 24 24"><path d="M3 12l4-4 4 1 3-2 4 4"/><path d="M11 9l-3 3 2 2 3-2"/><path d="M13 12l2 2-2 2-2-2"/><path d="M15 14l2 2-2 2"/><path d="M21 12l-3 3"/></svg></i>
+              <div><strong>Partnerships that deliver</strong><span>Trade bodies, missions and government working together.</span></div>
+            </li>
+          </ul>
+
+          <a href="#membership-form" class="global-cta">
+            <span>Apply for Membership</span>
             <span>&rarr;</span>
           </a>
         </div>
@@ -1853,11 +3278,11 @@ button {
   </section>
 
   <!-- ============================================================
-       4. THREE PILLARS CARD CONTAINER (Exact Match)
+       5. THREE PILLARS CARD CONTAINER
        ============================================================ -->
   <section class="sec-three-pillars" id="pillars">
     <div class="container">
-      <div class="pillars-white-enclosure">
+      <div class="pillars-white-enclosure reveal">
         
         <!-- Pillar 1 -->
         <div class="pillar-single-item">
@@ -1895,11 +3320,11 @@ button {
        ============================================================ -->
   <section class="sec-collab" id="collaboration">
     <div class="container">
-      <div class="collab-head">
+      <div class="collab-head reveal">
         <p class="collab-eyebrow">Government &amp; Trade Bodies</p>
         <h2 class="collab-heading">Working in collaboration with</h2>
       </div>
-      <div class="collab-panel">
+      <div class="collab-panel reveal">
         <figure class="collab-item">
           <img src="assets/partners/mpidc.png" alt="MP Industrial Development Corporation Limited">
         </figure>
@@ -1922,7 +3347,7 @@ button {
   <section class="sec-the-makers" id="makers">
     <div class="container">
       
-      <div class="makers-head-center">
+      <div class="makers-head-center reveal">
         <div class="makers-eyebrow-rule" data-en="— MEET THE —" data-hi="— मिलिए इनसे —">— MEET THE —</div>
         <h2 class="makers-section-h2" data-en="The Makers" data-hi="द मेकर्स">The Makers</h2>
         <p class="makers-section-sub" data-en="Passionate leaders. Transformative ideas. Unstoppable forward momentum." data-hi="उत्साही नेतृत्वकर्ता। परिवर्तनकारी विचार। निरंतर आगे बढ़ती गति।">
@@ -1930,22 +3355,22 @@ button {
         </p>
       </div>
 
-      <div class="makers-group-block">
+      <div class="makers-group-block reveal">
         <h3 class="makers-group-heading">National Leadership</h3>
         <div class="makers-profile-grid grid-leaders-4" id="national-roster-grid"></div>
       </div>
 
-      <div class="makers-group-block">
+      <div class="makers-group-block reveal">
         <h3 class="makers-group-heading">State Leadership</h3>
         <div class="makers-profile-grid grid-leaders" id="state-roster-grid"></div>
       </div>
 
-      <div class="makers-group-block">
+      <div class="makers-group-block reveal">
         <h3 class="makers-group-heading">Sectoral Chairs &amp; Co-Chairs</h3>
         <div class="makers-profile-grid" id="sectoral-roster-grid"></div>
       </div>
 
-      <div class="makers-group-block">
+      <div class="makers-group-block reveal">
         <h3 class="makers-group-heading">Secretariat</h3>
         <article class="secretariat-band">
           <div class="maker-card-photo">
@@ -1963,276 +3388,14 @@ button {
     </div>
   </section>
 
-  <!-- ============================================================
-       7. DARK NAVY MEMBERSHIP INTEREST FORM
-       ============================================================ -->
-  <section class="sec-dark-rsvp" id="membership-form">
-    <div class="container">
-      <div class="dark-rsvp-container-card">
-          <h2 class="dark-rsvp-title">ICC Madhya Pradesh — Membership Interest Form</h2>
-          <p class="dark-rsvp-subtitle">Tell us about yourself and your business. Membership is by invitation — we'll be in touch once we've reviewed your application.</p>
-          
-          <form class="dark-rsvp-form" id="icc-membership-form" onsubmit="handleMembershipSubmit(event)">
-            
-            <!-- SECTION 1: Personal Details -->
-            <div class="form-section-header">
-              <div class="form-section-num-title">1. Personal Details</div>
-            </div>
-            
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-name">Full Name *</label>
-                <input type="text" class="dark-input-box" id="mf-name" placeholder="Example: Ankit Mehta" required autocomplete="name">
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-desig">Designation / Title *</label>
-                <input type="text" class="dark-input-box" id="mf-desig" placeholder="Example: Managing Director" required autocomplete="organization-title">
-              </div>
-            </div>
+  <a href="#membership-form" class="floating-apply" id="floating-apply">
+    <span>Apply for Membership</span>
+    <span>&rarr;</span>
+  </a>
 
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-phone">Mobile Number *</label>
-                <input type="tel" class="dark-input-box" id="mf-phone" placeholder="Example: +91 98765 43210" required autocomplete="tel">
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-email">Email Address *</label>
-                <input type="email" class="dark-input-box" id="mf-email" placeholder="Example: you@company.com" required autocomplete="email">
-              </div>
-            </div>
-
-            <div class="dark-input-field-wrap">
-              <label class="dark-input-label" for="mf-city">City *</label>
-              <input type="text" class="dark-input-box" id="mf-city" placeholder="Example: Indore" required autocomplete="address-level2">
-            </div>
-
-            <!-- SECTION 2: Company Details -->
-            <div class="form-section-header">
-              <div class="form-section-num-title">2. Company Details</div>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-company">Company Name *</label>
-                <input type="text" class="dark-input-box" id="mf-company" placeholder="Example: Your Company Pvt. Ltd." required autocomplete="organization">
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-industry">Industry / Sector *</label>
-                <select class="dark-select-box" id="mf-industry" required>
-                  <option value="" disabled selected>Select one</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Manufacturing">Manufacturing</option>
-                  <option value="FMCG">FMCG</option>
-                  <option value="Real Estate">Real Estate</option>
-                  <option value="Infrastructure">Infrastructure</option>
-                  <option value="Capital Markets & Investments">Capital Markets &amp; Investments</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Health & Hygiene">Health &amp; Hygiene</option>
-                  <option value="Hospitality">Hospitality</option>
-                  <option value="International Relations & Trade">International Relations &amp; Trade</option>
-                  <option value="Pharma & Life Sciences">Pharma &amp; Life Sciences</option>
-                  <option value="Renewable Energy">Renewable Energy</option>
-                  <option value="Agriculture & Food Processing">Agriculture &amp; Food Processing</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-est-year">Year of Establishment *</label>
-                <input type="text" class="dark-input-box" id="mf-est-year" placeholder="Example: 2005" required>
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-turnover">Annual Turnover</label>
-                <select class="dark-select-box" id="mf-turnover">
-                  <option value="" disabled selected>Select range</option>
-                  <option value="Under ₹1 Cr">Under ₹1 Cr</option>
-                  <option value="₹1 Cr – ₹10 Cr">₹1 Cr – ₹10 Cr</option>
-                  <option value="₹10 Cr – ₹50 Cr">₹10 Cr – ₹50 Cr</option>
-                  <option value="₹50 Cr – ₹100 Cr">₹50 Cr – ₹100 Cr</option>
-                  <option value="₹100 Cr – ₹500 Cr">₹100 Cr – ₹500 Cr</option>
-                  <option value="₹500 Cr+">₹500 Cr+</option>
-                  <option value="Prefer not to say">Prefer not to say</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="dark-input-field-wrap">
-              <label class="dark-input-label" for="mf-nature">Nature of Business *</label>
-              <textarea class="dark-textarea-box" id="mf-nature" placeholder="Brief description of what your company does" required></textarea>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-employees">Number of Employees</label>
-                <select class="dark-select-box" id="mf-employees">
-                  <option value="" disabled selected>Select range</option>
-                  <option value="1 – 10">1 – 10</option>
-                  <option value="11 – 50">11 – 50</option>
-                  <option value="51 – 200">51 – 200</option>
-                  <option value="201 – 500">201 – 500</option>
-                  <option value="500+">500+</option>
-                </select>
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-website">Company Website</label>
-                <input type="url" class="dark-input-box" id="mf-website" placeholder="https://yourcompany.com">
-              </div>
-            </div>
-
-            <div class="dark-input-field-wrap">
-              <label class="dark-input-label" for="mf-linkedin">Personal LinkedIn Profile</label>
-              <input type="url" class="dark-input-box" id="mf-linkedin" placeholder="https://linkedin.com/in/profile">
-            </div>
-
-            <!-- SECTION 3: Why ICC MP -->
-            <div class="form-section-header">
-              <div class="form-section-num-title">3. Why ICC MP</div>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-hear-about">How did you hear about ICC MP? *</label>
-                <select class="dark-select-box" id="mf-hear-about" required>
-                  <option value="" disabled selected>Select one</option>
-                  <option value="Council member referral">Council member referral</option>
-                  <option value="Launch event">Launch event</option>
-                  <option value="LinkedIn / Social media">LinkedIn / Social media</option>
-                  <option value="Press / Media">Press / Media</option>
-                  <option value="ICC HQ">ICC HQ</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-referrer">If referred, name of referring member</label>
-                <input type="text" class="dark-input-box" id="mf-referrer" placeholder="Referring member name">
-              </div>
-            </div>
-
-            <div class="dark-input-field-wrap">
-              <label class="dark-input-label" for="mf-why-join">Why do you want to join ICC MP? *</label>
-              <textarea class="dark-textarea-box" id="mf-why-join" placeholder="What draws you to the chamber?" required></textarea>
-            </div>
-
-            <div class="dark-input-field-wrap">
-              <label class="dark-input-label" for="mf-contribution">What do you hope to contribute to the chamber?</label>
-              <textarea class="dark-textarea-box" id="mf-contribution" placeholder="Skills, networks, expertise, or time you'd bring to the table"></textarea>
-            </div>
-
-            <!-- SECTION 4: Engagement & Interests -->
-            <div class="form-section-header">
-              <div class="form-section-num-title">4. Engagement &amp; Interests</div>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-sectoral-committee">Which sectoral committee interests you?</label>
-                <select class="dark-select-box" id="mf-sectoral-committee">
-                  <option value="" disabled selected>Select one</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Manufacturing">Manufacturing</option>
-                  <option value="FMCG">FMCG</option>
-                  <option value="Real Estate">Real Estate</option>
-                  <option value="Infrastructure">Infrastructure</option>
-                  <option value="Capital Markets & Investments">Capital Markets &amp; Investments</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Health & Hygiene">Health &amp; Hygiene</option>
-                  <option value="Hospitality">Hospitality</option>
-                  <option value="International Relations & Trade">International Relations &amp; Trade</option>
-                  <option value="Open to suggestion">Open to suggestion</option>
-                </select>
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-leadership-role">Open to a leadership role within your sector?</label>
-                <select class="dark-select-box" id="mf-leadership-role">
-                  <option value="" disabled selected>Select one</option>
-                  <option value="Yes, definitely">Yes, definitely</option>
-                  <option value="Maybe, tell me more">Maybe, tell me more</option>
-                  <option value="No, prefer to participate as a member">No, prefer to participate as a member</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="dark-input-field-wrap">
-              <label class="dark-input-label">Areas of interest — Select any:</label>
-              <div class="checkbox-pills-grid">
-                <label class="pill-checkbox-item"><input type="checkbox" name="interest" value="Policy advocacy"> Policy advocacy</label>
-                <label class="pill-checkbox-item"><input type="checkbox" name="interest" value="Trade & exports"> Trade &amp; exports</label>
-                <label class="pill-checkbox-item"><input type="checkbox" name="interest" value="Networking"> Networking</label>
-                <label class="pill-checkbox-item"><input type="checkbox" name="interest" value="Investor access"> Investor access</label>
-                <label class="pill-checkbox-item"><input type="checkbox" name="interest" value="Government liaison"> Government liaison</label>
-                <label class="pill-checkbox-item"><input type="checkbox" name="interest" value="International business"> International business</label>
-                <label class="pill-checkbox-item"><input type="checkbox" name="interest" value="Industry events"> Industry events</label>
-                <label class="pill-checkbox-item"><input type="checkbox" name="interest" value="Mentorship & learning"> Mentorship &amp; learning</label>
-              </div>
-            </div>
-
-            <!-- SECTION 5: References -->
-            <div class="form-section-header">
-              <div class="form-section-num-title">5. References</div>
-              <p class="form-section-subtext">At least one reference should ideally be a current ICC MP member or someone known to the council.</p>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-ref1-name">Reference 1 — Name</label>
-                <input type="text" class="dark-input-box" id="mf-ref1-name" placeholder="Full name">
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-ref1-contact">Reference 1 — Contact</label>
-                <input type="text" class="dark-input-box" id="mf-ref1-contact" placeholder="Mobile or email">
-              </div>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-ref2-name">Reference 2 — Name</label>
-                <input type="text" class="dark-input-box" id="mf-ref2-name" placeholder="Full name">
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="mf-ref2-contact">Reference 2 — Contact</label>
-                <input type="text" class="dark-input-box" id="mf-ref2-contact" placeholder="Mobile or email">
-              </div>
-            </div>
-
-            <!-- Declaration -->
-            <div class="declaration-notice-box">
-              <strong style="color: var(--gold-btn); display: block; margin-bottom: 4px;">Declaration</strong>
-              Membership of ICC Madhya Pradesh is by invitation and subject to approval by the Council. Submitting this form does not guarantee membership. The information you provide will be used solely for the purpose of evaluating your application and will not be shared outside the council without your consent.
-
-              <label class="declaration-checkbox-wrap">
-                <input type="checkbox" id="mf-declaration-confirm" required>
-                <span>I confirm that the information provided is accurate and understand that membership is subject to approval by the ICC MP Council. *</span>
-              </label>
-            </div>
-
-            <p class="dark-form-error" id="membership-form-error" hidden>Could not submit your application. Please check fields and try again.</p>
-
-            <button type="submit" class="btn-confirm-seat-gold" id="btn-submit-membership" style="width: 100%; margin-top: 10px;">
-              <span>Submit Application</span>
-              <span>&rarr;</span>
-            </button>
-
-            <p style="font-size: 12.5px; color: #94A3B8; text-align: center; margin-top: 6px;">
-              We aim to respond within 5 working days. Questions? Contact Sunil Sharma, ICC MP Secretariat.
-            </p>
-          </form>
-
-          <!-- Success Message View -->
-          <div id="membership-success" style="display: none; padding: 36px 16px; text-align: center;">
-            <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(229,168,59,0.18); color: #E5A83B; font-size: 32px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 2px solid #E5A83B;">✓</div>
-            <h3 style="font-size: 26px; font-weight: 800; color: #FFD97A; margin-bottom: 12px;">Thank you for your interest.</h3>
-            <p style="color: #E2E8F0; font-size: 15.5px; max-width: 540px; margin: 0 auto 20px; line-height: 1.6;">
-              We've received your application and will be in touch within 5 working days.
-            </p>
-            <div style="font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan-accent); padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1);">
-              ICC Madhya Pradesh — Makers of Progress.
-            </div>
-          </div>
-      </div>
-    </div>
-  </section>
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
 
 </main>
 
@@ -2259,11 +3422,6 @@ button {
         A Century of Service to the Nation
       </div>
 
-      <div class="footer-social-icons">
-        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-circle-link" aria-label="LinkedIn">in</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener" class="social-circle-link" aria-label="Twitter / X">𝕏</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-link" aria-label="Instagram">IG</a>
-      </div>
     </div>
 
     <div class="footer-bottom-legal">
@@ -2310,13 +3468,13 @@ function initials(name) {
   return (parts[0].charAt(0) + (parts.length > 1 ? parts[parts.length - 1].charAt(0) : '')).toUpperCase();
 }
 
-function makerCard(m) {
+function makerCard(m, i) {
   const ini = initials(m.name);
   const photo = m.photo
     ? `<img src="${m.photo}" alt="${m.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="maker-card-ph" style="display:none">${ini}</div>`
     : `<div class="maker-card-ph">${ini}</div>`;
   return `
-    <article class="maker-profile-card">
+    <article class="maker-profile-card reveal" style="--i:${i}">
       <div class="maker-sector-banner">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.9L22 10l-5 4.4L18.2 22 12 18.2 5.8 22 7 14.4 2 10l7.1-1.1z"/></svg>
         <span>${m.sector}</span>
@@ -2341,7 +3499,7 @@ function renderCouncil() {
   groups.forEach(({ id, group }) => {
     const el = document.getElementById(id);
     if (!el) return;
-    el.innerHTML = COUNCIL.filter(m => m.group === group).map(makerCard).join('');
+    el.innerHTML = COUNCIL.filter(m => m.group === group).map((m, i) => makerCard(m, i)).join('');
   });
 }
 
@@ -2381,7 +3539,8 @@ async function handleMembershipSubmit(e) {
   if (err) err.hidden = true;
   if (btn) {
     btn.disabled = true;
-    btn.innerHTML = "<span>Submitting Application...</span>";
+    btn.classList.add("is-loading");
+    btn.innerHTML = '<span class="mf-spinner" aria-hidden="true"></span><span>Submitting Application...</span>';
   }
 
   const selectedInterests = Array.from(document.querySelectorAll('input[name="interest"]:checked'))
@@ -2406,8 +3565,6 @@ async function handleMembershipSubmit(e) {
     "If referred, name of the referring member": document.getElementById("mf-referrer").value.trim(),
     "Why do you want to join ICC MP?": document.getElementById("mf-why-join").value.trim(),
     "What do you hope to contribute to the chamber?": document.getElementById("mf-contribution").value.trim(),
-    "Which sectoral committee interests you?": document.getElementById("mf-sectoral-committee").value || "",
-    "Open to a leadership role within your sector?": document.getElementById("mf-leadership-role").value || "",
     "Areas of interest": selectedInterests,
     "Reference 1 — Name": document.getElementById("mf-ref1-name").value.trim(),
     "Reference 1 — Contact": document.getElementById("mf-ref1-contact").value.trim(),
@@ -2426,6 +3583,7 @@ async function handleMembershipSubmit(e) {
     if (err) err.hidden = false;
     if (btn) {
       btn.disabled = false;
+      btn.classList.remove("is-loading");
       btn.innerHTML = "<span>Submit Application</span><span>&rarr;</span>";
     }
   }
@@ -2481,11 +3639,156 @@ function restartTaglineTimer() {
 }
 
 /* ------------------------------------------------------------
+   4. APPLICATION PROGRESS BAR
+   ------------------------------------------------------------ */
+function updateMembershipProgress() {
+  const form = document.getElementById("icc-membership-form");
+  const fill = document.getElementById("mf-progress-fill");
+  const pct = document.getElementById("mf-progress-pct");
+  const track = document.getElementById("mf-progress-track");
+  const wrap = document.getElementById("mf-progress");
+  if (!form || !fill || !pct) return;
+
+  const required = Array.from(form.querySelectorAll("[required]"));
+  const done = required.filter(el => el.type === "checkbox" ? el.checked : String(el.value || "").trim() !== "").length;
+  const value = required.length ? Math.round((done / required.length) * 100) : 0;
+
+  fill.style.width = value + "%";
+  pct.textContent = value === 100 ? "Ready to submit" : value + "%";
+  if (track) track.setAttribute("aria-valuenow", String(value));
+  if (wrap) wrap.classList.toggle("is-complete", value === 100);
+}
+
+function initMembershipProgress() {
+  const form = document.getElementById("icc-membership-form");
+  if (!form) return;
+  form.addEventListener("input", updateMembershipProgress);
+  form.addEventListener("change", updateMembershipProgress);
+  updateMembershipProgress();
+}
+
+/* ------------------------------------------------------------
+   5. SCROLL REVEAL
+   ------------------------------------------------------------ */
+function initScrollReveal() {
+  const items = document.querySelectorAll(".reveal");
+  if (!items.length) return;
+  if (!("IntersectionObserver" in window)) {
+    items.forEach(el => el.classList.add("is-visible"));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  items.forEach(el => io.observe(el));
+}
+
+/* ------------------------------------------------------------
+   6. FLOATING APPLY CTA (mobile)
+   ------------------------------------------------------------ */
+function initFloatingApply() {
+  const cta = document.getElementById("floating-apply");
+  const hero = document.getElementById("hero");
+  const formSec = document.getElementById("membership-form");
+  if (!cta || !hero || !formSec || !("IntersectionObserver" in window)) return;
+
+  let heroVisible = true;
+  let formVisible = false;
+  const sync = () => cta.classList.toggle("show", !heroVisible && !formVisible);
+
+  new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; sync(); }, { threshold: 0.05 }).observe(hero);
+  new IntersectionObserver(([e]) => { formVisible = e.isIntersecting; sync(); }, { threshold: 0.05 }).observe(formSec);
+}
+
+/* ------------------------------------------------------------
+   7. HERO COUNT-UP STATS
+   ------------------------------------------------------------ */
+function runCountUp(el) {
+  const target = parseInt(el.getAttribute("data-count"), 10) || 0;
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) { el.textContent = String(target); return; }
+  const duration = 1500;
+  const start = performance.now();
+  const tick = (now) => {
+    const t = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - t, 3);
+    el.textContent = String(Math.round(target * eased));
+    if (t < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
+function initHeroCountUp() {
+  const row = document.getElementById("hero-stat-row");
+  if (!row) return;
+  const start = () => row.querySelectorAll(".count-up").forEach(runCountUp);
+  if (!("IntersectionObserver" in window)) { start(); return; }
+  const io = new IntersectionObserver((entries) => {
+    if (entries.some(e => e.isIntersecting)) { start(); io.disconnect(); }
+  }, { threshold: 0.3 });
+  io.observe(row);
+}
+
+/* ------------------------------------------------------------
+   8. HEADER SCROLL STATE, PAGE PROGRESS, BACK TO TOP
+   ------------------------------------------------------------ */
+function initHeaderScroll() {
+  const header = document.querySelector(".site-header");
+  const bar = document.getElementById("scroll-progress-bar");
+  const btt = document.getElementById("back-to-top");
+  let ticking = false;
+  const update = () => {
+    const y = window.scrollY || 0;
+    if (header) header.classList.toggle("is-scrolled", y > 24);
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + "%";
+    if (btt) btt.classList.toggle("show", y > 700);
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  if (btt) btt.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  update();
+}
+
+/* ------------------------------------------------------------
+   9. HERO POINTER TILT (desktop, fine pointer only)
+   ------------------------------------------------------------ */
+function initHeroTilt() {
+  const col = document.querySelector(".hero-map-col");
+  if (!col || !window.matchMedia) return;
+  const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!fine || reduce) return;
+  col.addEventListener("pointermove", (e) => {
+    const r = col.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    col.style.transform = `perspective(1200px) rotateY(${(x * 8).toFixed(2)}deg) rotateX(${(-y * 8).toFixed(2)}deg)`;
+  });
+  col.addEventListener("pointerleave", () => {
+    col.style.transform = "perspective(1200px) rotateY(0deg) rotateX(0deg)";
+  });
+}
+
+/* ------------------------------------------------------------
    INITIALIZATION
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", () => {
   renderCouncil();
   startTaglineTimer();
+  initMembershipProgress();
+  initScrollReveal();
+  initFloatingApply();
+  initHeroCountUp();
+  initHeaderScroll();
+  initHeroTilt();
 });
 </script>
 
