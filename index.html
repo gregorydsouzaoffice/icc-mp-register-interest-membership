@@ -1715,6 +1715,123 @@ button {
 }
 
 /* ============================================================
+   JOIN MEMBERSHIP STRIP (hero)
+   ============================================================ */
+.join-strip {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.5vw, 26px);
+  margin-top: clamp(26px, 4vw, 44px);
+  padding: 16px clamp(16px, 2.5vw, 24px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: 0 18px 44px -24px rgba(28, 42, 71, 0.35);
+  position: relative;
+  overflow: hidden;
+  animation: heroRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.9s;
+}
+.join-strip::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--gold-btn) 0%, var(--royal-blue) 100%);
+}
+.join-avatars {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 6px;
+}
+.join-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+  background: var(--royal-blue);
+  overflow: hidden;
+  margin-left: -13px;
+  box-shadow: 0 6px 14px -6px rgba(28, 42, 71, 0.45);
+  display: block;
+  transition: transform 0.25s ease;
+}
+.join-avatar:first-child {
+  margin-left: 0;
+}
+.join-strip:hover .join-avatar {
+  transform: translateX(3px);
+}
+.join-strip:hover .join-avatar:first-child {
+  transform: none;
+}
+.join-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 8%;
+  filter: grayscale(1) contrast(1.06);
+  display: block;
+}
+.join-avatar-more {
+  background: var(--navy-dark);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join-copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.join-copy strong {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.join-copy span {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  background: var(--royal-blue);
+  color: #FFFFFF;
+  padding: 13px 24px;
+  border-radius: var(--r-pill);
+  font-size: 14.5px;
+  font-weight: 800;
+  box-shadow: 0 12px 26px -10px rgba(46, 76, 140, 0.55);
+  transition: all 0.2s ease;
+}
+.join-btn:hover {
+  background: var(--royal-hover);
+  transform: translateY(-2px);
+}
+.join-btn span:last-child {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.join-btn:hover span:last-child {
+  transform: translateX(4px);
+}
+
+/* ============================================================
    HERO CREATIVE LAYER (aurora, badges, seal, stats, cue)
    ============================================================ */
 .hero-visual-stage {
@@ -2532,7 +2649,7 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-eyebrow-tag, .hero-status-pill, .hero-display-h1 > span, .hero-description-p, .hero-cta-row, .hero-steps, .hero-stat-row, .hero-scroll-cue, .hero-visual-stage, .pulse-dot::after,
+  .hero-eyebrow-tag, .hero-status-pill, .hero-display-h1 > span, .hero-description-p, .hero-cta-row, .hero-steps, .hero-stat-row, .hero-scroll-cue, .hero-visual-stage, .pulse-dot::after, .join-strip,
   .typo-heavy-blue, .maker-profile-card.reveal.is-visible, .mf-success, .mf-success-icon, .tagline-dot-btn.active::after {
     animation: none;
   }
@@ -2551,6 +2668,10 @@ p {
   .hero-visual-stage { max-width: 420px; padding: 24px 22px 34px; }
   .hero-stat-row { justify-content: center; }
   .hero-status-pill { align-self: center; }
+  .join-strip { flex-direction: column; text-align: center; padding: 22px 20px; }
+  .join-strip::before { left: 0; right: 0; top: 0; bottom: auto; width: auto; height: 4px; background: linear-gradient(90deg, var(--gold-btn) 0%, var(--royal-blue) 100%); }
+  .join-avatars { padding-left: 0; }
+  .join-btn { width: 100%; justify-content: center; }
   .hero-cta-row, .hero-steps { justify-content: center; }
   .pillars-white-enclosure { grid-template-columns: 1fr; }
   .pillar-single-item:not(:last-child)::after { display: none; }
@@ -2586,7 +2707,6 @@ p {
   .journey-copy { flex: 1; min-width: 0; }
   .floating-apply { display: inline-flex; }
   .back-to-top { display: none; }
-  .hero-scroll-cue { display: none; }
   .mf-pills { grid-template-columns: 1fr 1fr; }
   .about-icc-stats { grid-template-columns: repeat(3, 1fr); }
   .global-points { grid-template-columns: 1fr; }
@@ -2698,12 +2818,12 @@ p {
         </div>
 
         <h1 class="hero-display-h1">
-          <span class="typo-thin" data-en="shaping mp's" data-hi="मध्य प्रदेश का">shaping mp's</span>
+          <span class="typo-thin">become a</span>
           <span class="typo-mid">
-            <span class="t-light" data-en="business" data-hi="व्यापारिक">business</span>
-            <span class="t-bold-blue" data-en="future." data-hi="भविष्य।">future.</span>
+            <span class="t-light">maker of</span>
+            <span class="t-bold-blue">progress.</span>
           </span>
-          <span class="typo-heavy-blue" data-en="makers of progress." data-hi="मेकर्स ऑफ़ प्रोग्रेस।">makers of progress.</span>
+          <span class="typo-heavy-blue">join icc mp.</span>
         </h1>
 
         <p class="hero-description-p">
@@ -2786,11 +2906,27 @@ p {
         </div>
       </div>
 
-      <a href="#membership-form" class="hero-scroll-cue">
-        <span>Scroll to apply</span>
-        <i aria-hidden="true"></i>
-      </a>
     </div>
+
+      <!-- Join membership strip -->
+      <div class="join-strip">
+        <div class="join-avatars" aria-hidden="true">
+          <span class="join-avatar"><img src="assets/council/ankit-mehta.png?v=5" alt=""></span>
+          <span class="join-avatar"><img src="assets/council/tapan-agrawal.png" alt=""></span>
+          <span class="join-avatar"><img src="assets/council/ankur-khaitan.png?v=4" alt=""></span>
+          <span class="join-avatar"><img src="assets/council/priyesh-nagar.png?v=5" alt=""></span>
+          <span class="join-avatar"><img src="assets/council/sumit-ghorawat.png" alt=""></span>
+          <span class="join-avatar join-avatar-more">+12</span>
+        </div>
+        <div class="join-copy">
+          <strong>Join the Makers of Progress</strong>
+          <span>Council leaders from across MP&rsquo;s key sectors are already on board. Register your interest and take your seat at the table.</span>
+        </div>
+        <a href="#membership-form" class="join-btn">
+          <span>Join Membership</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
   </div>
 </section>
 
