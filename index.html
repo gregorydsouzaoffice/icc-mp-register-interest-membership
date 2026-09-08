@@ -189,24 +189,13 @@ button {
    ============================================================ */
 .hero-top-eyebrow-center {
   text-align: center;
-  padding: clamp(24px, 3.5vw, 36px) 0 10px;
+  padding: clamp(20px, 3vw, 32px) 0 clamp(16px, 2.5vw, 24px);
   position: relative;
   z-index: 5;
 }
-.hero-eyebrow-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: clamp(12px, 1.6vw, 13.5px);
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--royal-blue);
-  font-family: var(--font-main);
-}
-.eyebrow-dash {
-  color: var(--royal-blue);
-  opacity: 0.7;
+.hero-top-eyebrow-center .hero-status-pill {
+  margin-bottom: 0;
+  box-shadow: 0 10px 26px -12px rgba(46, 76, 140, 0.28);
 }
 
 .sec-hero-split {
@@ -2188,10 +2177,39 @@ button {
 }
 
 /* ============================================================
-   MEMBERSHIP JOURNEY STEPPER
+   MEMBERSHIP JOURNEY STEPPER / HOW IT WORKS
    ============================================================ */
 .sec-journey {
-  padding: 0 0 clamp(22px, 3vw, 30px);
+  padding: clamp(10px, 2vw, 20px) 0 clamp(36px, 5vw, 54px);
+  scroll-margin-top: 110px;
+}
+.journey-head {
+  text-align: center;
+  margin-bottom: clamp(24px, 3.5vw, 36px);
+}
+.journey-eyebrow {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 8px;
+}
+.journey-heading {
+  font-size: clamp(28px, 3.8vw, 38px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+.journey-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--gold-btn);
+  margin: 14px auto 0;
+  border-radius: 2px;
 }
 .journey-strip {
   max-width: 980px;
@@ -2797,12 +2815,12 @@ p {
   <section class="sec-hero-split" id="hero">
     <div class="container">
       
-      <!-- Centered Eyebrow: ICC MP MEMBERSHIP -->
+      <!-- Centered Status Pill: Membership Interest Form | Now Open -->
       <div class="hero-top-eyebrow-center">
-        <div class="hero-eyebrow-tag">
-          <span class="eyebrow-dash">—</span>
-          <span data-en="ICC MADHYA PRADESH MEMBERSHIP" data-hi="आईसीसी मध्य प्रदेश सदस्यता">ICC MADHYA PRADESH MEMBERSHIP</span>
-          <span class="eyebrow-dash">—</span>
+        <div class="hero-status-pill">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>Membership Interest Form</span>
+          <em>Now open</em>
         </div>
       </div>
 
@@ -2810,12 +2828,6 @@ p {
       
       <!-- Left Typography Column -->
       <div class="hero-typo-col">
-        
-        <div class="hero-status-pill">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          <span>Membership Interest Form</span>
-          <em>Now open</em>
-        </div>
 
         <h1 class="hero-display-h1">
           <span class="typo-thin">become a</span>
@@ -2825,26 +2837,6 @@ p {
           </span>
           <span class="typo-heavy-blue">join icc mp.</span>
         </h1>
-
-        <div class="hero-cta-row">
-          <a href="#membership-form" class="btn-hero-primary">
-            <span>Start the form</span>
-            <span>&rarr;</span>
-          </a>
-          <a href="#journey" class="btn-hero-ghost">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg>
-            <span>How it works</span>
-          </a>
-        </div>
-
-        <ol class="hero-steps" aria-label="The form has five sections">
-          <li class="hero-steps-label" aria-hidden="true">5 sections</li>
-          <li><a href="#mf-sec-1"><b>01</b>Personal</a></li>
-          <li><a href="#mf-sec-2"><b>02</b>Company</a></li>
-          <li><a href="#mf-sec-3"><b>03</b>Why ICC MP</a></li>
-          <li><a href="#mf-sec-4"><b>04</b>Interests</a></li>
-          <li><a href="#mf-sec-5"><b>05</b>References</a></li>
-        </ol>
 
         <!-- Count-up stat chips -->
         <div class="hero-stat-row" id="hero-stat-row">
@@ -2873,29 +2865,12 @@ p {
 
           <img src="assets/logos/theme-logo-transparent.png" alt="Makers of Progress — Madhya Pradesh Chapter Theme Logo">
 
-          <div class="hero-float-badge hfb-1" aria-hidden="true">
-            <i><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM4 10h1M4 14h1M19 10h1M19 14h1M10 4v1M14 4v1M10 19v1M14 19v1"/></svg></i>
-            <span>Technology</span>
-          </div>
-          <div class="hero-float-badge hfb-2" aria-hidden="true">
-            <i><svg viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></i>
-            <span>FMCG</span>
-          </div>
-          <div class="hero-float-badge hfb-3" aria-hidden="true">
-            <i><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9l6-4 6 4v11"/><path d="M10 20v-5h4v5"/></svg></i>
-            <span>Infrastructure</span>
-          </div>
-          <div class="hero-float-badge hfb-4" aria-hidden="true">
-            <i><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></i>
-            <span>Real Estate</span>
-          </div>
-
           <div class="hero-seal" aria-hidden="true">
             <svg viewBox="0 0 120 120">
               <defs>
                 <path id="hero-seal-path" d="M60,60 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/>
               </defs>
-              <text><textPath href="#hero-seal-path">A CENTURY OF SERVICE &bull; 1925 &mdash; 2025 &bull; </textPath></text>
+              <text><textPath href="#hero-seal-path">A CENTURY OF SERVICE &bull; 1925 &mdash; 2026 &bull; </textPath></text>
             </svg>
             <div class="hero-seal-core"><strong>100</strong><span>Years</span></div>
           </div>
@@ -2919,53 +2894,12 @@ p {
           <span>Council leaders from across MP&rsquo;s key sectors are already on board. Register your interest and take your seat at the table.</span>
         </div>
         <a href="#membership-form" class="join-btn">
-          <span>Join Membership</span>
+          <span>Apply for Membership</span>
           <span>&rarr;</span>
         </a>
       </div>
   </div>
 </section>
-
-  <!-- ============================================================
-       DYNAMIC SHUFFLING TAGLINES (Come & Fade Animation - Exact Text)
-       ============================================================ -->
-  <section class="sec-shuffling-taglines" id="taglines-shuffler" aria-label="Key Theme Pillars">
-    <div class="container">
-      <div class="taglines-card-wrapper" onmouseenter="pauseTaglineRotation()" onmouseleave="resumeTaglineRotation()">
-        
-        <!-- Rotating Tagline Slides (Exact Text Only) -->
-        <div class="tagline-slides-container">
-          
-          <div class="tagline-slide active" data-slide-idx="0">
-            <h2 class="tagline-hero-text" data-en="New-Age Thought Leaders." data-hi="न्यू-एज थॉट लीडर्स।">
-              New-Age Thought Leaders.
-            </h2>
-          </div>
-
-          <div class="tagline-slide" data-slide-idx="1">
-            <h2 class="tagline-hero-text" data-en="Transformative Ideas." data-hi="परिवर्तनकारी विचार।">
-              Transformative Ideas.
-            </h2>
-          </div>
-
-          <div class="tagline-slide" data-slide-idx="2">
-            <h2 class="tagline-hero-text" data-en="Reimagining MP's Growth Story." data-hi="रीइमेजिनिंग एमपी'स ग्रोथ स्टोरी।">
-              Reimagining MP's Growth Story.
-            </h2>
-          </div>
-
-        </div>
-
-        <!-- Dot Navigation Indicators -->
-        <div class="tagline-dots-nav" role="tablist">
-          <button type="button" class="tagline-dot-btn active" onclick="jumpToTagline(0)" aria-label="Slide 1: New-Age Thought Leaders"></button>
-          <button type="button" class="tagline-dot-btn" onclick="jumpToTagline(1)" aria-label="Slide 2: Transformative Ideas"></button>
-          <button type="button" class="tagline-dot-btn" onclick="jumpToTagline(2)" aria-label="Slide 3: Reimagining MP's Growth Story"></button>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- ============================================================
        CHAPTER MISSION STATEMENT / MANIFESTO BANNER
@@ -3030,10 +2964,14 @@ p {
   </section>
 
   <!-- ============================================================
-       MEMBERSHIP JOURNEY STEPPER
+       MEMBERSHIP JOURNEY STEPPER / HOW IT WORKS
        ============================================================ -->
-  <section class="sec-journey" id="journey" aria-label="Your membership journey">
+  <section class="sec-journey" id="journey" aria-label="How It Works">
     <div class="container">
+      <div class="journey-head reveal">
+        <p class="journey-eyebrow">Application Process</p>
+        <h2 class="journey-heading">How It Works</h2>
+      </div>
       <div class="journey-strip reveal">
         <div class="journey-steps">
           <div class="journey-step">
@@ -3072,7 +3010,6 @@ p {
         <div class="mf-head">
           <p class="mf-eyebrow">Apply for Membership</p>
           <h2 class="mf-title">ICC Madhya Pradesh <em>Membership Interest Form</em></h2>
-          <p class="mf-subtitle">Tell us about yourself and your business. Membership is by invitation — we'll be in touch once we've reviewed your application.</p>
         </div>
 
         <div class="mf-progress" id="mf-progress">
@@ -3715,56 +3652,7 @@ async function handleMembershipSubmit(e) {
 }
 
 /* ------------------------------------------------------------
-   3. SHUFFLING TAGLINES CONTROLLER (Come & Fade Rotation)
-   ------------------------------------------------------------ */
-let currentTaglineIdx = 0;
-let taglineTimer = null;
-const TOTAL_TAGLINES = 3;
-
-function showTagline(idx) {
-  currentTaglineIdx = idx;
-  const slides = document.querySelectorAll(".tagline-slide");
-  const dots = document.querySelectorAll(".tagline-dot-btn");
-
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === idx);
-  });
-
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === idx);
-  });
-}
-
-function nextTagline() {
-  const nextIdx = (currentTaglineIdx + 1) % TOTAL_TAGLINES;
-  showTagline(nextIdx);
-}
-
-function jumpToTagline(idx) {
-  showTagline(idx);
-  restartTaglineTimer();
-}
-
-function startTaglineTimer() {
-  if (taglineTimer) clearInterval(taglineTimer);
-  taglineTimer = setInterval(nextTagline, 3800);
-}
-
-function pauseTaglineRotation() {
-  if (taglineTimer) clearInterval(taglineTimer);
-}
-
-function resumeTaglineRotation() {
-  startTaglineTimer();
-}
-
-function restartTaglineTimer() {
-  pauseTaglineRotation();
-  startTaglineTimer();
-}
-
-/* ------------------------------------------------------------
-   4. APPLICATION PROGRESS BAR
+   3. APPLICATION PROGRESS BAR
    ------------------------------------------------------------ */
 function updateMembershipProgress() {
   const form = document.getElementById("icc-membership-form");
@@ -3907,7 +3795,6 @@ function initHeroTilt() {
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", () => {
   renderCouncil();
-  startTaglineTimer();
   initMembershipProgress();
   initScrollReveal();
   initFloatingApply();
