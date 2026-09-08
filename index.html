@@ -3218,23 +3218,17 @@ p {
             </div>
           </div>
 
-          <div class="mf-grid-2">
-            <div class="mf-field">
-              <label class="mf-label" for="mf-hear-about">How did you hear about ICC MP? *</label>
-              <select class="mf-select" id="mf-hear-about" required>
-                <option value="" disabled selected>Select one</option>
-                <option value="Council member referral">Council member referral</option>
-                <option value="Launch event">Launch event</option>
-                <option value="LinkedIn / Social media">LinkedIn / Social media</option>
-                <option value="Press / Media">Press / Media</option>
-                <option value="ICC HQ">ICC HQ</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div class="mf-field">
-              <label class="mf-label" for="mf-referrer">If referred, name of referring member</label>
-              <input type="text" class="mf-input" id="mf-referrer" placeholder="Referring member name">
-            </div>
+          <div class="mf-field">
+            <label class="mf-label" for="mf-hear-about">How did you hear about ICC MP? *</label>
+            <select class="mf-select" id="mf-hear-about" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Council member referral">Council member referral</option>
+              <option value="Launch event">Launch event</option>
+              <option value="LinkedIn / Social media">LinkedIn / Social media</option>
+              <option value="Press / Media">Press / Media</option>
+              <option value="ICC HQ">ICC HQ</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
 
           <div class="mf-field">
@@ -3698,7 +3692,6 @@ async function handleMembershipSubmit(e) {
     "Company Website": document.getElementById("mf-website").value.trim(),
     "Personal LinkedIn Profile": document.getElementById("mf-linkedin").value.trim(),
     "How did you hear about ICC MP?": document.getElementById("mf-hear-about").value,
-    "If referred, name of the referring member": document.getElementById("mf-referrer").value.trim(),
     "Why do you want to join ICC MP?": document.getElementById("mf-why-join").value.trim(),
     "What do you hope to contribute to the chamber?": document.getElementById("mf-contribution").value.trim(),
     "Areas of interest": selectedInterests,
